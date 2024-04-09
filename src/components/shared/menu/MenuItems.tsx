@@ -81,7 +81,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
       default : return {width:0, positionX:0}
 
     }
-  }, [pathname, itemOne])
+  }, [pathname, itemOne, itemTwo, itemThree, itemFour])
 
   return (
     <div className='relative hidden tablet:block bg-main-theme z-50' style={{height:`${itemsMenuHeight}px`}}>  

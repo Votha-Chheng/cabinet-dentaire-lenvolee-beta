@@ -40,7 +40,7 @@ const Conseils: FC = () => {
           <FaCaretSquareRight size={20} />
         </div>
         <p className={classP}>
-        <span className="font-semibold">Complétez votre bros&shy;sa&shy;ge avec le pas&shy;sage d'un fil den&shy;tai&shy;re</span> afin d&apos;éli&shy;mi&shy;ner la pla&shy;que den&shy;tai&shy;re rési&shy;duel&shy;le dans les espaces inter&shy;dentaires. Cepen&shy;dant, <span className="font-semibold">le fil dentaire doit être manipulé avec prudence de manière à ne pas léser les gencives.</span><br/>
+        <span className="font-semibold">Complétez votre bros&shy;sa&shy;ge avec le pas&shy;sage d&apos;un fil den&shy;tai&shy;re</span> afin d&apos;éli&shy;mi&shy;ner la pla&shy;que den&shy;tai&shy;re rési&shy;duel&shy;le dans les espaces inter&shy;dentaires. Cepen&shy;dant, <span className="font-semibold">le fil dentaire doit être manipulé avec prudence de manière à ne pas léser les gencives.</span><br/>
           Si les espaces in&shy;ter&shy;den&shy;tai&shy;res sont lar&shy;ges, ou alors en cas de pro&shy;blè&shy;mes de gencives ou bien lors d&apos;un traitement d&apos;or&shy;tho&shy;don&shy;tie, <span className="font-semibold">l&apos;uti&shy;li&shy;sa&shy;tion de bros&shy;set&shy;tes inter&shy;dentai&shy;res est pré&shy;co&shy;ni&shy;sée.</span>
         </p>
       </li>

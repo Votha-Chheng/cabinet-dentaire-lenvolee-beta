@@ -42,7 +42,7 @@ const InfoMenu: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variant
             href="https://www.google.com/maps/place/L'envol%C3%A9e+Cabinet+dentaire/@43.6286619,3.8972849,17z/data=!3m1!4b1!4m6!3m5!1s0x12b6afe3746f22a9:0x26b0e09020eb2030!8m2!3d43.6286619!4d3.8972849!16s%2Fg%2F11rcx7fhm4?entry=ttu" 
             className='border-l-2 border-buff px-2'
           >
-            Résidence L'Envolée, 3 place Charles de Gaulle<br/>
+            Résidence L&apos;Envolée, 3 place Charles de Gaulle<br/>
             34 170 Castelnau-le-Lez
           </Link>
           <Link 

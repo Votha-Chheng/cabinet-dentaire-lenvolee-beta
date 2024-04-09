@@ -2,7 +2,7 @@ import { centerImage } from '@/animations/horizontalCarouselAnimations'
 import ImageForModal from '@/components/shared/ImageForModal'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useCallback, useEffect, useState } from 'react'
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 
 type HorizontalCarouselProps = {
@@ -16,7 +16,7 @@ const HorizontalCarousel: FC<HorizontalCarouselProps> = ({images}) => {
   const [clickRight, setClickRight] = useState<boolean>(false)
   const [clicked, setClicked] = useState<number>(0)
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setClicked(prev=> prev === 10 ? 0 : prev+1)
 
     setTimeout(()=> {
@@ -28,7 +28,7 @@ const HorizontalCarousel: FC<HorizontalCarouselProps> = ({images}) => {
     setTimeout(()=> {
       setClickRight(false)
     }, 700)
-  }
+  }, [images.length]) 
 
   const handlePrevious = () => {
     setClicked(prev=> prev === 10 ? 0 : prev+1)
@@ -53,7 +53,7 @@ const HorizontalCarousel: FC<HorizontalCarouselProps> = ({images}) => {
     const moveAutomatically = setInterval(()=>handleNext(), 5000)
     
     return ()=> clearInterval(moveAutomatically)
-  }, [clicked])
+  }, [clicked, handleNext])
 
   return (
     <>
