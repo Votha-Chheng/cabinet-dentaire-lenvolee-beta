@@ -8,6 +8,40 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 20px;
+}
+
+.h3-title{
+  position: relative;
+  letter-spacing: 0.75px;
+}
+
+.h3-title h3{
+  padding: 20px 25px;
+  background-color: #D4AB7C;
+  color: #363c51;
+  text-transform: uppercase;
+}
+
+.after-band{
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 50px;
+  clip-path: polygon(100% 75%, 0% 100%, 100% 100%);
+  top:-50px;
+  background: #7b5428;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -16,15 +50,6 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
   .text-balance {
