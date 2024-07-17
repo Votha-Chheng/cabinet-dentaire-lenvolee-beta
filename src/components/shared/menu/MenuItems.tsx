@@ -13,6 +13,7 @@ import { usePathname } from 'next/navigation'
 import { useWindowSize } from '@uidotdev/usehooks'
 
 const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variants=undefined}) => {
+  const [start, setStart] = useState<boolean>(false)
   const [itemsMenuTop, setItemsMenuTop] = useState<number>(0)
   const [itemsMenuLeft, setItemsMenuLeft] = useState<number>(0)
   const [itemsMenuHeight, setItemsMenuHeight] = useState<number>(0)
@@ -36,7 +37,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
     if(itemsRef.current){
       setItemsMenuTop(itemsRef.current.getBoundingClientRect().top)
       setItemsMenuLeft(itemsRef.current.getBoundingClientRect().x)
-      //setItemsMenuHeight(itemsRef.current.getBoundingClientRect().height)
+      setItemsMenuHeight(itemsRef.current.clientHeight)
     }
   }, [setItemsMenuTop, setItemsMenuLeft, setItemsMenuHeight])
 
@@ -68,6 +69,10 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
     }
   }, [setItemFour])
 
+  useEffect(()=> {
+    setStart(true)
+  }, [])
+
   const position = useMemo(()=> {
     return Y>itemsMenuTop ? "fixed":"absolute"
   }, [Y, itemsMenuTop])
@@ -83,6 +88,8 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
     }
   }, [pathname, itemOne, itemTwo, itemThree, itemFour])
 
+  if(!start) return null
+
   return (
     <div className='relative hidden tablet:block bg-main-theme z-50'>  
       <nav className={`${position} w-full top-0 bg-main-theme`}>
@@ -95,7 +102,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
           animate="animate" 
           className={`${tauri.className} overflow-hidden text-buff w-[95%] desktop:w-[80%] mx-auto text-lg desktop:text-xl desktop:py-1 tracking-wider`}
         >
-          <div className='flex w-[120%] gap-10 items-center transition-transform duration-150 relative' style={{transform: `translateX(${(width !== null) && width <1024 ? "0" : position === "fixed" ? "0":"-150px"})`}} >
+          <div className='flex w-[120%] gap-10 items-center transition-transform duration-150 relative py-2.5' style={{transform: `translateX(${(width !== null) && width <1024 ? "0" : position === "fixed" ? "0":"-150px"})`}} >
             <li className='hidden laptop:block'>
               <Link href="/">
                 <Image src="/images/logo.svg" alt="logo du cabinet dentaire L'enviolée" width={150} height={150} />

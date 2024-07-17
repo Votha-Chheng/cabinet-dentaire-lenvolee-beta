@@ -20,7 +20,7 @@ const PageContainer: FC<PageContainerProps> = ({children}) => {
   }, [setBandHeight])
 
   return (
-    <main className='bg-main-theme pt-44 pb-72 px-2 tablet:pr-[20px] tablet:pl-[70px] laptop:pr-[70px] laptop:pl-[110px] desktop:pr-[150px] desktop:pl-[200px]'>
+    <main className='bg-main-theme pt-44 pb-72 px-2 tablet:pr-[20px] tablet:pl-[70px] laptop:pr-[70px] laptop:pl-[110px] desktop:pr-[150px] desktop:pl-[200px] overflow-hidden'>
       <LineThrough height="1px" width='110%' bgColor='bg-buff' variants={horizontalLines} initial='initial' animate="animate" />
       <motion.div ref={containerRef} variants={background} initial="initial" animate="animate" className='relative'>
         <LineThrough height='108%' width='1px' bgColor='bg-buff' classComplement='absolute' variants={verticalLines} initial='initialTop' animate='animateFirst' />

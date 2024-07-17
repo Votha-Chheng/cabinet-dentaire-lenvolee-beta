@@ -30,9 +30,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${oswald.className} relative`}>
-          <TopMenu/>
-          {children}
-          <Footer/>
+        <TopMenu/>
+        {children}
+        <Footer/>
       </body>
     </html>
   );

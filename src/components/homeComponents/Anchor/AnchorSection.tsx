@@ -1,4 +1,3 @@
-import { titleAppear } from '@/animations/anchorAnimations'
 import { fromLeftOutside, fromRightOutside, vertical } from '@/animations/linesAnim'
 import { opacities, reverseOpacity } from '@/animations/opacityAnim'
 import LineThrough from '@/components/shared/LineThrough'
@@ -44,6 +43,17 @@ const AnchorSection: FC = () => {
     return "900px"
   }
 
+  const returnMarginTop = (width: number)=> {
+    if(width>1440){
+      return "65.55px"
+    } else if (width<1440 && width>1024){
+      return "55.55px"
+    } else if(width>424 && width<1024){
+      return "48px"
+    }
+    return "30px"
+  }
+
   useEffect(()=> {
     const moveAutomatically = setInterval(()=>handleNext(), 7000)
     
@@ -51,13 +61,13 @@ const AnchorSection: FC = () => {
   }, [])
 
   return (
-    <section className='w-[95%] desktop:w-[1440px] mx-auto mb-0 laptop:mb-72' style={{height: returnSectionHeight(height ?? 0, width?? 0)}}>
+    <section className='w-[95%] desktop:w-[1440px] mx-auto mb-0 laptop:mb-72' style={{height: returnSectionHeight(height ?? 0, width?? 0), marginTop: `${returnMarginTop(width ?? 0)}`}}>
       <div className='w-full h-[660px] desktop:h-[700px] flex items-start relative'>
         <LineThrough height='103%' bgColor='bg-buff' width='1px' variants={vertical} delay={0.5} />
         <motion.article variants={opacities} custom={{delay: 1.8, duration: 0.25}} initial="initial" animate="animate" className="relative h-full w-1/2 hidden laptop:block">
           <Image 
             src={`/images/${arrayBigImages[bigImg]}`} 
-            alt="cabinet chaise dentiste" 
+            alt="Les Dr Sylvie Ma et Quentin Lupi" 
             style={{objectFit:"cover", objectPosition:"50% 0%"}} 
             className={`z-10`} 
             priority 
@@ -69,7 +79,7 @@ const AnchorSection: FC = () => {
         <article className='h-full w-full laptop:w-1/2 flex flex-col' >
           <motion.div variants={opacities} custom={{delay: 1.9, duration: 0.25}} initial="initial" animate="animate" className='relative h-1/2 overflow-hidden'>
             <Image src={`/images/duo.jpg`} alt="Les dentistes Sylvie Ma-Francinet et Quentin Lupi" className='tablet:block hidden' style={{objectFit:"cover"}} priority fill/>
-            <Image src={`/images/mini-group-portrait.jpg`} alt="Les dentistes Sylvie Ma-Francinet et Quentin Lupi" className='tablet:hidden block translate-y-8' style={{objectFit:"cover"}} priority fill/>
+            <Image src={`/images/mini-group-portrait.jpg`} alt="Les dentistes Sylvie Ma-Francinet et Quentin Lupi" className='tablet:hidden block' style={{objectFit:"cover"}} priority fill/>
           </motion.div>
           <LineThrough width='107%' bgColor='bg-buff' height='1px' classComplement="laptop:ml-0 -ml-5" variants={fromLeftOutside} />
           <aside className='relative h-1/2 text-buff flex  items-center justify-center overflow-hidden'>

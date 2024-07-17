@@ -31,6 +31,7 @@ const TopMenu: FC = () => {
           <Burger setSlideMenu={setSlideMenu} slideMenu={slideMenu} />
           <LineThrough classComplement='hidden mobile:block desktop:hidden mr-3' bgColor='bg-buff' width='100vw' height='1px' variants={horizontal} originX={0} />
           <InfoMenu variants={opacities} delay={1.6} />
+          <LineThrough classComplement='absolute bottom-0 -ml-2.5 block mobile:hidden' bgColor='bg-buff' width='100vw' height='1px' variants={horizontal} originX={0} />
         </section>
         <MenuItems variants={opacities} delay={1.7}/>
       </header>
