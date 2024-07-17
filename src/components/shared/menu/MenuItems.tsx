@@ -13,7 +13,6 @@ import { usePathname } from 'next/navigation'
 import { useWindowSize } from '@uidotdev/usehooks'
 
 const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variants=undefined}) => {
-  const [start, setStart] = useState<boolean>(false)
   const [itemsMenuTop, setItemsMenuTop] = useState<number>(0)
   const [itemsMenuLeft, setItemsMenuLeft] = useState<number>(0)
   const [itemsMenuHeight, setItemsMenuHeight] = useState<number>(0)
@@ -69,10 +68,6 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
     }
   }, [setItemFour])
 
-  useEffect(()=> {
-    setStart(true)
-  }, [])
-
   const position = useMemo(()=> {
     return Y>itemsMenuTop ? "fixed":"absolute"
   }, [Y, itemsMenuTop])
@@ -87,8 +82,6 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
 
     }
   }, [pathname, itemOne, itemTwo, itemThree, itemFour])
-
-  if(!start) return null
 
   return (
     <div className='relative hidden tablet:block bg-main-theme z-50'>  
