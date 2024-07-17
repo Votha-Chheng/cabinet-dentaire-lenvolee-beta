@@ -19,9 +19,10 @@ const InfoMenu: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variant
     >
       <article className='flex items-center gap-2'>
         <FaRegClock size={40} className='w-[45px]' />
-        <p className='border-l-2 border-buff px-2 tracking-wide'>
-          Lundi - Mardi - Jeudi : 9h-19h<br/>
-          Vendredi : 9h-17h
+        <p className='border-l-2 text-sm border-buff px-2 tracking-wide'>
+          <em>Lundi - Mardi : 9h00-19h00</em><br/>
+          <em>Mercredi : 14h00-19h00</em><br/>
+          <em>Vendredi : 9h00-16h00</em>
         </p>
       </article>
       <article className='flex items-center gap-2 tracking-wide'>

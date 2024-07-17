@@ -24,9 +24,10 @@ const Footer: FC = () => {
             <div className="px-5 w-full">
               <div className={bandStyle}>
                 <FaRegClock size={40} />
-                <p>
-                  Lundi - Mardi - Jeudi : 9h à 19h<br/>
-                  Vendredi : 9h-17h
+                <p className='text-sm'>
+                  <em>Lundi - Mardi : 9h00-19h00</em><br/>
+                  <em>Mercredi : 14h00-19h00</em><br/>
+                  <em>Vendredi : 9h00-16h00</em>
                 </p>
               </div>
               <div className={bandStyle}>

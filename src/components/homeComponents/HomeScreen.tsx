@@ -6,6 +6,8 @@ import PresentationSection from './Presentation/PresentationSection'
 import AccueilSection from './Accueil/AccueilSection'
 import ImageModal from '../shared/ImageModal'
 import { ModalContextProvider } from '@/context/modalContext'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const HomeScreen: FC = () => {
   const [presentationInView, setPresentationInView] = useState<boolean>(false)
@@ -28,6 +30,14 @@ const HomeScreen: FC = () => {
       <ImageModal />
       <main className={`${bgColor} transition-colors duration-300 overflow-x-hidden`}>
         <AnchorSection/>
+        <motion.div 
+          initial={{opacity:0}}
+          animate={presentationInView ? {opacity:1}:{}}
+          transition={{duraion:0.25}}
+          className='w-full h-96 relative mt-64 tablet:hidden block border-t-main-theme border-t'
+        >
+          <Image src="/images/team.jpg" alt="Equipe complète du Cabinet dentaire L'Envolée à Montpellier/Castelnau-le-lez" className='' fill style={{objectFit:"cover"}} />
+        </motion.div>
         <PresentationSection setPresentationInView={setPresentationInView}/>
         <AccueilSection setAccueilSectionInView={setAccueilInView}/>
       </main>

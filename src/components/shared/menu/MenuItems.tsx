@@ -24,8 +24,8 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
   const pathname = usePathname()
   const Y = useScrollY()
   const itemsRef = useRef<HTMLUListElement>(null)
-  const itemOneRef = useRef<HTMLDivElement>(null)
-  const itemTwoRef = useRef<HTMLDivElement>(null)
+  const itemOneRef = useRef<HTMLLIElement>(null)
+  const itemTwoRef = useRef<HTMLLIElement>(null)
   const itemThreeRef = useRef<HTMLLIElement>(null)
   const itemFourRef = useRef<HTMLLIElement>(null)
 
@@ -42,28 +42,28 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
 
   useEffect(()=> {
     if(itemOneRef.current){
-      const temp = {width: itemOneRef.current.clientWidth, positionX: itemOneRef.current.getBoundingClientRect().x}
+      const temp = {width: itemOneRef.current.clientWidth, positionX: itemOneRef.current.getBoundingClientRect().x - 50}
       setItemOne(temp)
     }
   }, [setItemOne])
 
   useEffect(()=> {
     if(itemTwoRef.current){
-      const temp = {width: itemTwoRef.current.clientWidth, positionX: itemTwoRef.current.getBoundingClientRect().x}
+      const temp = {width: itemTwoRef.current.clientWidth, positionX: itemTwoRef.current.getBoundingClientRect().x - 50}
       setItemTwo(temp)
     }
   }, [setItemTwo])
 
   useEffect(()=> {
     if(itemThreeRef.current){
-      const temp = {width: itemThreeRef.current.clientWidth, positionX: itemThreeRef.current.getBoundingClientRect().x}
+      const temp = {width: itemThreeRef.current.clientWidth, positionX: itemThreeRef.current.getBoundingClientRect().x - 50}
       setItemThree(temp)
     }
   }, [setItemThree])
 
   useEffect(()=> {
     if(itemFourRef.current){
-      const temp = {width: itemFourRef.current.clientWidth, positionX: itemFourRef.current.getBoundingClientRect().x}
+      const temp = {width: itemFourRef.current.clientWidth, positionX: itemFourRef.current.getBoundingClientRect().x - 50}
       setItemFour(temp)
     }
   }, [setItemFour])
@@ -93,12 +93,12 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
           custom={{delay, duration}} 
           initial="initial" 
           animate="animate" 
-          className={`${tauri.className} overflow-hidden text-buff w-[95%] desktop:w-[80%] mx-auto text-lg desktop:text-xl py-2.5 desktop:py-1 tracking-wider`}
+          className={`${tauri.className} overflow-hidden text-buff w-[95%] desktop:w-[80%] mx-auto text-lg desktop:text-xl desktop:py-1 tracking-wider`}
         >
-          <div className='flex w-[120%] gap-10 items-center transition-transform duration-150 relative' style={{transform: `translateX(${(width !== null) && width <1024 ? "0" : position === "fixed" ? "0":"-248px"})`}} >
+          <div className='flex w-[120%] gap-10 items-center transition-transform duration-150 relative' style={{transform: `translateX(${(width !== null) && width <1024 ? "0" : position === "fixed" ? "0":"-150px"})`}} >
             <li className='hidden laptop:block'>
               <Link href="/">
-                <Image src="/images/logo.svg" alt="logo du cabinet dentaire L'enviolée" width={200} height={100} />
+                <Image src="/images/logo.svg" alt="logo du cabinet dentaire L'enviolée" width={150} height={150} />
               </Link>
             </li>
             <div className='flex gap-10 relative'>
@@ -107,16 +107,16 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
                 className='bg-buff absolute -bottom-1 h-1 rounded-md duration-200' 
                 style={{width:`${bandWidth.width}px`, left:`${bandWidth.positionX - itemsMenuLeft + 10}px`, transitionProperty: "left"}} 
               />
-              <li className='px-2'>
+              <li className='px-2' ref={itemOneRef}>
                 <Link href="/ethique">
-                  <div ref={itemOneRef}>
+                  <div >
                     Notre éthique
                   </div>
                 </Link>
               </li>
-              <li className='px-2'>
+              <li ref={itemTwoRef} className='px-2'>
                 <Link href="/prevention-dentaire">
-                  <div ref={itemTwoRef}>
+                  <div>
                     Prévention dentaire
                   </div>
                 </Link>

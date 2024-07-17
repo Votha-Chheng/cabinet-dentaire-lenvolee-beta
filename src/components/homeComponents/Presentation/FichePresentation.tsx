@@ -6,6 +6,7 @@ import FicheTexteResponsive from './FicheTexteResponsive'
 import { motion } from 'framer-motion'
 
 type FichePresentationProps = {
+  diplomesListe?: string[]
   textLeft: boolean
   topGreyPosition: string
   topBrownPosition: string
@@ -20,9 +21,26 @@ type FichePresentationProps = {
   originXGrey?: number
   delay?:number
   duration?: number 
+  diplomes?: boolean
 }
 
-const FichePresentation: FC<FichePresentationProps> = ({topGreyPosition, topBrownPosition, brownWidth, leftBrownPosition, brownHeight, textLeft, nom, fonction, children, inView, img, originXGrey = 0, delay=0.2, duration = 0.25
+const FichePresentation: FC<FichePresentationProps> = ({
+  topGreyPosition, 
+  topBrownPosition, 
+  brownWidth, 
+  leftBrownPosition, 
+  brownHeight, 
+  textLeft, 
+  nom, 
+  fonction, 
+  children, 
+  inView, 
+  img, 
+  originXGrey = 0, 
+  delay=0.2, 
+  duration = 0.25,
+  diplomesListe,
+  diplomes=false
 }) => {
   return (
     <article className="relative">  
@@ -47,13 +65,13 @@ const FichePresentation: FC<FichePresentationProps> = ({topGreyPosition, topBrow
         />  
         <div className={`static w-[760px] laptop:w-[1000px] desktop:w-[80%] h-[500px] mx-auto items-center z-20 flex ${textLeft ? "flex-row":"flex-row-reverse"}`}>
           <LineThrough height='100%' width='1px' bgColor="bg-main-theme" classComplement='self-start' variants={vertical} delay={0.4} />
-          <FicheTextLeft nom={nom} fonction={fonction} inView={inView} img={img}>
+          <FicheTextLeft nom={nom} fonction={fonction} inView={inView} img={img} diplomes={diplomes} diplomeListe={diplomesListe} >
             {children}
           </FicheTextLeft>
         </div>
         <LineThrough height='1px' width='100%' bgColor="bg-main-theme" variants={horizontal} delay={0.5} />
       </div>
-      <FicheTexteResponsive nom={nom} fonction={fonction} inView={inView} img={img}>
+      <FicheTexteResponsive nom={nom} fonction={fonction} inView={inView} img={img} diplomeListe={diplomesListe} diplomes={diplomes}>
         {children}
       </FicheTexteResponsive>
     </article>
