@@ -36,7 +36,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
     if(itemsRef.current){
       setItemsMenuTop(itemsRef.current.getBoundingClientRect().top)
       setItemsMenuLeft(itemsRef.current.getBoundingClientRect().x)
-      setItemsMenuHeight(itemsRef.current.clientHeight)
+      setItemsMenuHeight(itemsRef.current.getBoundingClientRect().height)
     }
   }, [setItemsMenuTop, setItemsMenuLeft, setItemsMenuHeight])
 
