@@ -36,7 +36,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
     if(itemsRef.current){
       setItemsMenuTop(itemsRef.current.getBoundingClientRect().top)
       setItemsMenuLeft(itemsRef.current.getBoundingClientRect().x)
-      setItemsMenuHeight(itemsRef.current.getBoundingClientRect().height)
+      //setItemsMenuHeight(itemsRef.current.getBoundingClientRect().height)
     }
   }, [setItemsMenuTop, setItemsMenuLeft, setItemsMenuHeight])
 
@@ -84,7 +84,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
   }, [pathname, itemOne, itemTwo, itemThree, itemFour])
 
   return (
-    <div className='relative hidden tablet:block bg-main-theme z-50' style={{height:`${itemsMenuHeight-24}px`}}>  
+    <div className='relative hidden tablet:block bg-main-theme z-50'>  
       <nav className={`${position} w-full top-0 bg-main-theme`}>
         <LineThrough bgColor='bg-buff' width='100%' variants={horizontal} classComplement='laptop:block hidden' />
         <motion.ul 
