@@ -61,7 +61,7 @@ const EsthetiqueScreen = () => {
             La restauration dentaire cosmétique est une approche innovante qui vise à sublimer l&apos;apparence de vos dents tout en assurant leur fonctionnalité optimale. Au Cabinet Dentaire <span className='font-bold italic'>L&apos;Envolée</span> notre équipe d&apos;experts utilise des matériaux esthétiques de haute qualité, tels que 
             &nbsp;
             <TooltipProvider delayDuration={0.25}>
-              <Tooltip>
+              <Tooltip open={tooltipResine}>
                 <TooltipTrigger asChild>
                   <span 
                     className='font-bold underline-offset-2 underline decoration-dashed cursor-help'
