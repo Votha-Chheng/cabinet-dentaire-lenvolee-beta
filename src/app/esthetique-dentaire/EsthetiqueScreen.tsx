@@ -22,20 +22,20 @@ const EsthetiqueScreen = () => {
       <PageContainer>
         <PageSection subtitle='Nos soins esthétiques' delayBoolean={true} >
           <p className={classPStandard}>
-            L'esthétique dentaire joue un rôle essentiel dans la confiance en soi et l'ap&shy;pa&shy;ren&shy;ce générale du sourire. Au sein de notre cabinet dentaire <span className='font-bold italic'>L'Envolée</span>, situé à Montpellier et Castelnau-le-Lez, nous proposons des so&shy;lu&shy;tions in&shy;no&shy;van&shy;tes pour améliorer l’har&shy;monie de votre sou&shy;rire, tout en préser&shy;vant la santé de vos dents. 
+            L&apos;esthétique dentaire joue un rôle essentiel dans la confiance en soi et l&apos;ap&shy;pa&shy;ren&shy;ce générale du sourire. Au sein de notre cabinet dentaire <span className='font-bold italic'>L&apos;Envolée</span>, situé à Montpellier et Castelnau-le-Lez, nous proposons des so&shy;lu&shy;tions in&shy;no&shy;van&shy;tes pour améliorer l&apos;har&shy;monie de votre sou&shy;rire, tout en préser&shy;vant la santé de vos dents. 
           </p>
-          <p className={classPStandard}>Découvrez la liste de nos services d'esthétique dentaire dans les parties ci-dessous. </p>
+          <p className={classPStandard}>Découvrez la liste de nos services d&apos;esthétique dentaire dans les parties ci-dessous. </p>
         </PageSection>
         <PageSection subtitle='Blanchiment dentaire' delayBoolean={false} subtitleInview={sectionTwoInview} >
           <InView onChange={(inView, entry)=> setSectionTwoInview(inView)} triggerOnce={true} />
           <p className={classPStandard}>
-            Le blanchiment dentaire est une méthode populaire pour éclaircir la teinte des dents et redonner de l’éclat à votre sourire. Nous proposons des solutions professionnelles adaptées à vos besoins, qu'il s'agisse d’un blanchiment en cabinet ou d’un traitement à domicile supervisé. Grâce à des produits de haute qualité, nous pouvons réduire efficacement <span className='font-bold'>les taches causées par des aliments, des boissons, ou le tabac</span>, tout en préservant la santé de vos dents et de vos gencives. 
+            Le blanchiment dentaire est une méthode populaire pour éclaircir la teinte des dents et redonner de l&apos;éclat à votre sourire. Nous proposons des solutions professionnelles adaptées à vos besoins, qu&apos;il s&apos;agisse d&apos;un blanchiment en cabinet ou d&apos;un traitement à domicile supervisé. Grâce à des produits de haute qualité, nous pouvons réduire efficacement <span className='font-bold'>les taches causées par des aliments, des boissons, ou le tabac</span>, tout en préservant la santé de vos dents et de vos gencives. 
           </p>
           <p className={classPStandard}>
             Notre équipe vous accompagne tout au long du processus, en vous fournissant des conseils personnalisés pour maximiser les résultats et garantir un sourire lumineux et naturel.
           </p>
           <p className={classPStandard}>
-            Pour redonner de l’éclat à vos dents grâce à des techniques de blanchiment dentaire efficaces et sans risque et découvrir comment le blanchiment dentaire peut transformer votre sourire, <Link className='underline underline-offset-4 hover:opacity-75' href="tel:+33467756811">n'hésitez pas à nous contacter</Link>.
+            Pour redonner de l&apos;éclat à vos dents grâce à des techniques de blanchiment dentaire efficaces et sans risque et découvrir comment le blanchiment dentaire peut transformer votre sourire, <Link className='underline underline-offset-4 hover:opacity-75' href="tel:+33467756811">n&apos;hésitez pas à nous contacter</Link>.
           </p>
         </PageSection>
         <PageSection subtitle='Facettes dentaires' delayBoolean={false} subtitleInview={sectionThreeInview} >
@@ -51,13 +51,13 @@ const EsthetiqueScreen = () => {
             <legend className={`${tauri.className} text-center text-xs text-main-theme mt-1.5`}><i>Haut : avant la pose de facettes / Bas : après la pose</i></legend>
           </div>
           <p className={classPStandard}>
-            <Link className='underline underline-offset-4 hover:opacity-75' href="tel:+33467756811">N'hésitez pas à nous contacter</Link> pour en savoir plus sur la technique des facettes dentaires.
+            <Link className='underline underline-offset-4 hover:opacity-75' href="tel:+33467756811">N&apos;hésitez pas à nous contacter</Link> pour en savoir plus sur la technique des facettes dentaires.
           </p>
         </PageSection>
         <PageSection subtitle='Restauration dentaire cosmétique' delayBoolean={false} subtitleInview={sectionFourInview} >
           <InView onChange={(inView, entry)=> setSectionFourInview(inView)} triggerOnce={true} />
           <div className={classPStandard}>
-            La restauration dentaire cosmétique est une approche innovante qui vise à sublimer l'apparence de vos dents tout en assurant leur fonctionnalité optimale. Au Cabinet Dentaire <span className='font-bold italic'>L'Envolée</span> notre équipe d'experts utilise des matériaux esthétiques de haute qualité, tels que 
+            La restauration dentaire cosmétique est une approche innovante qui vise à sublimer l&apos;apparence de vos dents tout en assurant leur fonctionnalité optimale. Au Cabinet Dentaire <span className='font-bold italic'>L&apos;Envolée</span> notre équipe d&apos;experts utilise des matériaux esthétiques de haute qualité, tels que 
             &nbsp;
             <TooltipProvider delayDuration={0.25}>
               <Tooltip>
@@ -73,7 +73,7 @@ const EsthetiqueScreen = () => {
             , pour réparer les dents abîmées, cariées ou décolorées.
           </div>
           <p className={classPStandard}>
-            Grâce à ce traitement, nous redonnons à votre sourire son éclat naturel tout en préservant votre santé dentaire. Chaque restauration est soigneusement personnalisée pour s'harmoniser avec la couleur et la forme de vos dents existantes, offrant ainsi un résultat à la fois <span className='font-bold'>discret et durable</span>. Que ce soit pour <span className='font-bold'>une réparation dentaire</span> ou <span className='font-bold'>une transformation esthétique</span>, nous vous accompagnons avec attention pour répondre à vos besoins.
+            Grâce à ce traitement, nous redonnons à votre sourire son éclat naturel tout en préservant votre santé dentaire. Chaque restauration est soigneusement personnalisée pour s&apos;harmoniser avec la couleur et la forme de vos dents existantes, offrant ainsi un résultat à la fois <span className='font-bold'>discret et durable</span>. Que ce soit pour <span className='font-bold'>une réparation dentaire</span> ou <span className='font-bold'>une transformation esthétique</span>, nous vous accompagnons avec attention pour répondre à vos besoins.
           </p>
         </PageSection>
       </PageContainer>
