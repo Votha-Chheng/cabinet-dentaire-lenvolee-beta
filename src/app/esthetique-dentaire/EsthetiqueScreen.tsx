@@ -12,6 +12,7 @@ import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 
 const EsthetiqueScreen = () => {
+  const [tooltipResine, setTooltipResine] = useState<boolean>(false)
   const [sectionTwoInview, setSectionTwoInview] = useState<boolean>(false)
   const [sectionThreeInview, setSectionThreeInview] = useState<boolean>(false)
   const [sectionFourInview, setSectionFourInview] = useState<boolean>(false)
@@ -62,7 +63,17 @@ const EsthetiqueScreen = () => {
             <TooltipProvider delayDuration={0.25}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <span className='font-bold underline-offset-2 underline decoration-dashed cursor-help'>la résine composite</span>
+                  <span 
+                    className='font-bold underline-offset-2 underline decoration-dashed cursor-help'
+                    onClick={() => setTooltipResine(prev=> !prev)}
+                    onMouseEnter={() => setTooltipResine(true)}
+                    onMouseLeave={() => setTooltipResine(false)}
+                    onTouchStart={() => setTooltipResine(prev=> !prev)}
+                    onKeyDown={(e) => {
+                      e.preventDefault();
+                      e.key === 'Enter' && setTooltipResine(prev=> !prev);
+                    }}
+                  >la résine composite</span>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p className={`${tauri.className} w-96 text-left indent-0`}>Biomatériaux utilisés pour les chirurgiens-dentistes afin de restaurer la forme et la fonction du tissu dentaire manquant. Ils peuvent être appliqués directement sur la surface de la dent, contrairement à la céramique, et permettent donc une grande flexibilité.</p>
