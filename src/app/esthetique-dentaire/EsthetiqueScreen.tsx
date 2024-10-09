@@ -75,7 +75,7 @@ const EsthetiqueScreen = () => {
                   >la résine composite</span>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p className={`${tauri.className} w-96 text-left indent-0`}>Biomatériaux utilisés pour les chirurgiens-dentistes afin de restaurer la forme et la fonction du tissu dentaire manquant. Ils peuvent être appliqués directement sur la surface de la dent, contrairement à la céramique, et permettent donc une grande flexibilité.</p>
+                  <p className={`${tauri.className} w-80 text-left indent-0`}>Biomatériaux utilisés pour les chirurgiens-dentistes afin de restaurer la forme et la fonction du tissu dentaire manquant. Ils peuvent être appliqués directement sur la surface de la dent, contrairement à la céramique, et permettent donc une grande flexibilité.</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
