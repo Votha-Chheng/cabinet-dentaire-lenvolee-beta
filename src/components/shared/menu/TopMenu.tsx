@@ -25,7 +25,7 @@ const TopMenu: FC = () => {
   return (
     <>
       <SlideMenu slideMenu={slideMenu} />
-      <header className='bg-main-theme w-full fixed top-0 tablet:static z-50'>
+      <header className='bg-main-theme w-full fixed top-0 laptop:static z-50'>
         <section className='w-auto mobile:w-full relative px-1 mobile:px-2 laptop:px-12 mx-auto pb-0 pt-3 laptop:py-3 flex desktop:flex-row flex-row mobile:flex-col mobile:items-center justify-between z-50'>
           <Logo variants={opacities} delay={width && width>420 ? 1.5 : 0.75} />
           <Burger setSlideMenu={setSlideMenu} slideMenu={slideMenu} />

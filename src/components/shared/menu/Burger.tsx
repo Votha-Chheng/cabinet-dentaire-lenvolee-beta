@@ -13,7 +13,7 @@ const Burger: FC<BurgerProps> = ({setSlideMenu, slideMenu}) => {
   return (
     <motion.div 
       variants={opacities} custom={{delay:0.75, duration: 0.3}} initial="initial" animate="animate" 
-      className='mobile:absolute block tablet:hidden left-80 mobile:left-auto right-auto mobile:right-10 cursor-pointer z-40 text-buff' 
+      className='mobile:absolute block laptop:hidden left-80 mobile:left-auto right-auto mobile:right-10 cursor-pointer z-40 text-buff' 
       onClick={()=> setSlideMenu(prev=> !prev) } 
     >
       {

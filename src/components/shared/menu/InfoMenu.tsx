@@ -28,7 +28,7 @@ const InfoMenu: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variant
       <article className='flex items-center gap-2 tracking-wide'>
         <MdOutlinePermPhoneMsg size={40} className='w-[45px]'/>
         <div className='flex flex-col border-l-2 border-buff px-2'>
-          <Link href="tel:0467756811">
+          <Link href="tel:+33467756811">
             04 67 75 68 11
           </Link>
           <Link href="mailto:cabinetdentaire.lenvolee@gmail.com">

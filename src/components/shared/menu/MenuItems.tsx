@@ -11,6 +11,8 @@ import { AnimationParametersProps } from '@/@types/animationParametersProps'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { useWindowSize } from '@uidotdev/usehooks'
+import { FaCaretSquareDown } from 'react-icons/fa'
+import DropdownSpecialities from './DropdownSpecialities'
 
 const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variants=undefined}) => {
   const [itemsMenuTop, setItemsMenuTop] = useState<number>(0)
@@ -84,7 +86,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
   }, [pathname, itemOne, itemTwo, itemThree, itemFour])
 
   return (
-    <div className='relative hidden tablet:block bg-main-theme z-50'>  
+    <div className='relative hidden laptop:block bg-main-theme z-50'>  
       <nav className={`${position} w-full top-0 bg-main-theme`}>
         <LineThrough bgColor='bg-buff' width='100%' variants={horizontal} classComplement='laptop:block hidden' />
         <motion.ul 
@@ -113,6 +115,9 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
                     Notre éthique
                   </div>
                 </Link>
+              </li>
+              <li className='px-2 cursor-pointer flex items-center gap-2 z-[2000]'>
+                <DropdownSpecialities/>
               </li>
               <li ref={itemTwoRef} className='px-2'>
                 <Link href="/prevention-dentaire">
