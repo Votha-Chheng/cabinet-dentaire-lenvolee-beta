@@ -68,7 +68,6 @@ const EsthetiqueScreen = () => {
                     onClick={() => setTooltipResine(prev=> !prev)}
                     onMouseEnter={() => setTooltipResine(true)}
                     onMouseLeave={() => setTooltipResine(false)}
-                    onTouchStart={() => setTooltipResine(prev=> !prev)}
                     onKeyDown={(e) => {
                       e.preventDefault();
                       e.key === 'Enter' && setTooltipResine(prev=> !prev);
