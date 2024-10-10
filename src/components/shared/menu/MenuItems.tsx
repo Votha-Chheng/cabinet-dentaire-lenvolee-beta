@@ -22,6 +22,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
   const [itemTwo, setItemTwo] = useState<{width: number, positionX: number}>({width:0, positionX:0})
   const [itemThree, setItemThree] = useState<{width: number, positionX: number}>({width:0, positionX:0})
   const [itemFour, setItemFour] = useState<{width: number, positionX: number}>({width:0, positionX:0})
+  const [itemSpec, setItemSpec] = useState<{width: number, positionX: number}>({width:0, positionX:0})
 
   const pathname = usePathname()
   const Y = useScrollY()
@@ -30,6 +31,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
   const itemTwoRef = useRef<HTMLLIElement>(null)
   const itemThreeRef = useRef<HTMLLIElement>(null)
   const itemFourRef = useRef<HTMLLIElement>(null)
+  const itemSpecRef = useRef<HTMLLIElement>(null)
 
   const screenWidth = useWindowSize()
   const {width} = screenWidth
@@ -70,6 +72,13 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
     }
   }, [setItemFour])
 
+  useEffect(()=> {
+    if(itemSpecRef.current){
+      const temp = {width: itemSpecRef.current.clientWidth, positionX: itemSpecRef.current.getBoundingClientRect().x - 50}
+      setItemSpec(temp)
+    }
+  }, [setItemSpec])
+
   const position = useMemo(()=> {
     return Y>itemsMenuTop ? "fixed":"absolute"
   }, [Y, itemsMenuTop])
@@ -80,10 +89,14 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
       case "/prevention-dentaire" : return itemTwo
       case "/urgences" : return itemThree
       case "/infos-pratiques" : return itemFour
+      case "/parodontologie" : return itemSpec
+      case "/esthetique-dentaire" : return itemSpec
+      case "/endodontie" : return itemSpec
+      case "/implantologie" : return itemSpec
       default : return {width:0, positionX:0}
 
     }
-  }, [pathname, itemOne, itemTwo, itemThree, itemFour])
+  }, [pathname, itemOne, itemTwo, itemThree, itemFour, itemSpec])
 
   return (
     <div className='relative hidden laptop:block bg-main-theme z-50'>  
@@ -116,7 +129,7 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
                   </div>
                 </Link>
               </li>
-              <li className='px-2 cursor-pointer flex items-center gap-2 z-[2000]'>
+              <li ref={itemSpecRef} className='px-2 cursor-pointer flex items-center gap-2 z-[2000]'>
                 <DropdownSpecialities/>
               </li>
               <li ref={itemTwoRef} className='px-2'>

@@ -4,6 +4,6 @@ export const classPHygiene = "indent-8 laptop:indent-10 text-main-theme px-1.5 m
 
 export const classPConseils = "px-1.5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10"
 
-export const classPStandard = "px-1.5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-8"
+export const classPStandard = "px-1.5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-5"
 
 export const classLiStandard = "mb-2 tracking-wider font-bold text-main-theme text-base mobile:text-lg laptop:text-xl desktop:text-2xl"

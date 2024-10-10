@@ -29,8 +29,8 @@ const SlideMenu: FC<SlideMenuProps> = ({slideMenu}) => {
           </Link>
         </li>
         <li className='hover:text-[#dcba93] hover:bg-[#414862] w-full'>
-          <Link href="/parodontie">
-           Parodontie
+          <Link href="/parodontologie">
+           Parodontologie
           </Link>
         </li>
         <li className='hover:text-[#dcba93] hover:bg-[#414862] w-full'>

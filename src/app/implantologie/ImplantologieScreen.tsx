@@ -19,7 +19,7 @@ const ImplantologieScreen = () => {
       <PageContainer>
         <PageSection subtitle="L'implantologie, c'est quoi ?" delayBoolean={true} >
           <p className={classPStandard}>
-            L&apos;implantologie dentaire est la spécialité qui permet de remplacer les dents manquantes de manière permanente en utilisant des racines artificielles en titane, appelées implants dentaires. Ces implants sont insérés directement dans l&apos;os de la mâchoire pour servir de support à des couronnes, des bridges ou des prothèses dentaires. Cette technique offre une solution stable, durable et esthétique pour les patients qui souhaitent retrouver un sourire naturel et une fonction masticatoire optimale.
+            L&apos;implantologie dentaire est la spé&shy;ciali&shy;té qui permet de rem&shy;pla&shy;cer les dents manq&shy;uantes de ma&shy;nière perma&shy;nente en uti&shy;lisant des ra&shy;cines arti&shy;ficiel&shy;les en titane, ap&shy;pelées implants den&shy;taires. Ces implants sont in&shy;sé&shy;rés di&shy;recte&shy;ment dans l&apos;os de la mâc&shy;hoire pour servir de support à des couronnes, des bridges ou des prothèses dentaires. Cette tech&shy;nique offre une so&shy;lution sta&shy;ble, du&shy;rable et esthé&shy;ti&shy;que pour les pa&shy;tients qui souhaitent retrouver un sourire naturel et une fonction mastica&shy;toire optimale.
           </p>
         </PageSection>
         <PageSection subtitle='Poser un implant en 3 étapes' delayBoolean={false} subtitleInview={sectionTwoInview} >
@@ -27,15 +27,15 @@ const ImplantologieScreen = () => {
           <ol className='px-5 ml-5 list-decimal'>
             <li className={classLiStandard}>Consultation et évaluation personnalisée</li>
             <p className={classPStandard}>
-              La première étape consiste en une consultation approfondie avec un spécialiste en implantologie pour évaluer la santé bucco-dentaire du patient. Des examens radiographiques, comme un scanner ou une radiographie panoramique, sont réalisés pour analyser la qualité et la quantité d&apos;os disponible. Cette évaluation permet de déterminer si l&apos;implant est la solution appropriée et de planifier le traitement de manière personnalisée.
+              La première étape consiste en une consultation approfondie avec un spécialiste en implantologie pour évaluer la sant&shy;é buc&shy;co-dentaire du pa&shy;tient. Des exa&shy;mens ra&shy;dio&shy;gra&shy;phi&shy;ques, comme un scan&shy;ner ou une ra&shy;dio&shy;gra&shy;phie pano&shy;ra&shy;mi&shy;que, sont ré&shy;alisés pour ana&shy;lyser la qua&shy;lité et la quan&shy;tité d&apos;os dispo&shy;ni&shy;ble. Cet&shy;te éva&shy;luation permet de dé&shy;ter&shy;miner si l&apos;imp&shy;lant est la so&shy;lution ap&shy;pro&shy;priée et de pla&shy;nifier le trai&shy;te&shy;ment de ma&shy;nière per&shy;son&shy;nalisée.
             </p>
-            <li className={classLiStandard + " mt-10"}>Pose de l&apos;implant dentaire</li>
+            <li className={classLiStandard + " mt-10"}>Pose de l&apos;im&shy;plant den&shy;taire</li>
             <p className={classPStandard}>
-              Lors de la pose de l&apos;implant, une petite intervention chirurgicale est réalisée <span className='font-bold'>sous anesthésie locale </span> pour insérer la racine artificielle en titane dans l&apos;os de la mâchoire. Le processus de cicatrisation, appelé ostéo-intégration, <span className='font-bold'>dure généralement de 3 à 6 mois</span>, période durant laquelle l&apos;implant se fusionne naturellement avec l&apos;os.
+              Lors de la pose de l&apos;implant, une petite interven&shy;tion chi&shy;rur&shy;gi&shy;cale est ré&shy;ali&shy;sée <span className='font-bold'>sous anesthé&shy;sie lo&shy;ca&shy;le </span> pour in&shy;sé&shy;rer la ra&shy;cine arti&shy;ficiel&shy;le en titane dans l&apos;os de la mâ&shy;choire. Le pro&shy;ces&shy;sus de ci&shy;catri&shy;sa&shy;tion, ap&shy;pelé ostéo-inté&shy;gration, <span className='font-bold'>dure géné&shy;rale&shy;ment de 3 à 6 mois</span>, période durant laquelle l&apos;implant se fusionne naturellement avec l&apos;os.
             </p>
             <li className={classLiStandard + " mt-10"}>Installation de la couronne ou de la prothèse</li>
             <p className={classPStandard}>
-              Une fois que l&apos;implant est solidement ancré dans l&apos;os, une couronne, un pont ou une prothèse dentaire sur-mesure est fixée sur l&apos;implant. Ce remplacement est conçu pour s&apos;intégrer parfaitement avec les autres dents, tant sur le plan esthétique que fonctionnel.
+              Une fois que l&apos;implant est so&shy;lide&shy;ment an&shy;cré dans l&apos;os, une cou&shy;ron&shy;ne, un pont ou une pro&shy;thèse den&shy;taire sur-mesure est fi&shy;xée sur l&apos;implant. Ce remplacement est conçu pour s&apos;intégrer parfaitement avec les autres dents, tant sur le plan esthétique que fonctionnel.
             </p>
           </ol>
         </PageSection>
@@ -72,10 +72,10 @@ const ImplantologieScreen = () => {
           </ul>
           <Separator className='mx-auto w-[90%] mb-10'/>
           <p className={classPStandard}>
-            Nous mettons notre expertise en implantologie au service de votre santé bucco-dentaire et de votre confort. <span className='font-bold'>Nous utilisons des technologies de pointe et des matériaux de haute qualité</span> pour garantir des résultats optimaux et une sécurité maximale tout au long de votre traitement. 
+            Nous mettons notre expertise en implantologie au servi&shy;ce de votre san&shy;té bucco-den&shy;taire et de vo&shy;tre con&shy;fort. <span className='font-bold'>Nous utilisons des techno&shy;lo&shy;gies de pointe et des ma&shy;tériaux de hau&shy;te qua&shy;li&shy;té</span> pour ga&shy;ran&shy;tir des résul&shy;tats opti&shy;maux et une sé&shy;curi&shy;té maxima&shy;le tout au long de vo&shy;tre trai&shy;te&shy;ment. 
           </p>
           <p className={classPStandard}>
-            Notre approche personnalisée nous permet de répondre aux besoins spécifiques de chaque patient, en prenant en compte à la fois les aspects fonctionnels et esthétiques de la solution implantaire.
+            Notre approche personnalisée nous permet de répondre aux besoins spé&shy;ci&shy;fi&shy;ques de cha&shy;que pa&shy;tient, en pre&shy;nant en compte à la fois les aspects fonction&shy;nels et esthé&shy;ti&shy;ques de la so&shy;lu&shy;tion implantaire.
           </p>
         </PageSection>
       </PageContainer>
