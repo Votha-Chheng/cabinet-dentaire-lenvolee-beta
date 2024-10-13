@@ -4,8 +4,7 @@ import PageContainer from '@/components/layouts/PageContainer'
 import PageSection from '@/components/layouts/PageSection'
 import ContactButton from '@/components/shared/ContactButton'
 import PageHeader from '@/components/shared/PageHeader'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { classLiStandard, classPStandard, classUl } from '@/datas/classNames'
+import { classLiStandard, classPStandard } from '@/datas/classNames'
 import { tauri } from '@/fonts/tauri'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -32,7 +31,7 @@ const EsthetiqueScreen = () => {
           <p className={classPStandard}>
             Nos services d&apos;esthétique den&shy;taire comp&shy;tent les soins sui&shy;vants :
           </p>
-          <ul className={classUl}>
+          <ul className="w-full pl-12 pr-5 mt-5 mobile:pl-14 mobile:pr-10 text-justify">
             <li className={classLiStandard}>
               <div className='absolute top-1.5 -left-8'>
                 <FaCaretSquareRight size={20} />

@@ -3,7 +3,7 @@
 import PageContainer from '@/components/layouts/PageContainer'
 import PageSection from '@/components/layouts/PageSection'
 import PageHeader from '@/components/shared/PageHeader'
-import { classLiStandard, classPInList, classPLi, classPStandard, classUl } from '@/datas/classNames'
+import { classLiStandard, classPLi, classPStandard } from '@/datas/classNames'
 import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import { MoveRight } from 'lucide-react'

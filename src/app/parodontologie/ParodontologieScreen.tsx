@@ -5,7 +5,7 @@ import PageSection from '@/components/layouts/PageSection'
 import ContactButton from '@/components/shared/ContactButton'
 import PageHeader from '@/components/shared/PageHeader'
 import { TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { classLiStandard, classPStandard, classUl } from '@/datas/classNames'
+import { classLiStandard, classPStandard } from '@/datas/classNames'
 import { tauri } from '@/fonts/tauri'
 import { Tooltip } from '@radix-ui/react-tooltip'
 import React, { useState } from 'react'
@@ -29,7 +29,7 @@ const ParodontologieScreen = () => {
           <p className={classPStandard}>
             Les maladies des gencives peuvent avoir des con&shy;sé&shy;quen&shy;ces gra&shy;ves si elvles ne sont pas trai&shy;tées à temps, com&shy;me la per&shy;te de dents ou des pro&shy;blèmes de san&shy;té gé&shy;né&shy;rale. Nos servi&shy;ces de pa&shy;rodon&shy;to&shy;lo&shy;gie incluent :
           </p>
-          <ul className={classUl}>
+          <ul className="w-full pl-12 pr-5 mt-5 mobile:pl-14 mobile:pr-10 text-justify">
             <li className={classLiStandard}>
               <div className='absolute top-2 -left-10'>
                 <FaCaretSquareRight size={20} />
