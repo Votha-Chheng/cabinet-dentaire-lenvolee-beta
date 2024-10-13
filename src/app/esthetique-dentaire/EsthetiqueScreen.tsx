@@ -23,7 +23,7 @@ const EsthetiqueScreen = () => {
       <PageContainer>
         <PageSection subtitle="Le rôle du sourire" delayBoolean={true} >
           <p className={classPStandard}> 
-            L&apos;esthétique dentaire joue un rôle es&shy;sen&shy;tiel dans la confiance en soi et l&apos;ap&shy;pa&shy;rence géné&shy;ra&shy;le du sou&shy;ri&shy;re. Au cabinet den&shy;taire <span className='font-bold italic'>L'Envolée</span>, situé Castelnau-le-Lez, et à proxi&shy;mi&shy;té de Mont&shy;pellier, nous pro&shy;posons des so&shy;lu&shy;tions in&shy;no&shy;vantes pour améliorer l’har&shy;mo&shy;nie de votre sou&shy;rire tout en pré&shy;servant la san&shy;té de vos dents.
+            L&apos;esthétique dentaire joue un rôle es&shy;sen&shy;tiel dans la confiance en soi et l&apos;ap&shy;pa&shy;rence géné&shy;ra&shy;le du sou&shy;ri&shy;re. Au cabinet den&shy;taire <span className='font-bold italic'>L&apos;Envolée</span>, situé Castelnau-le-Lez, et à proxi&shy;mi&shy;té de Mont&shy;pellier, nous pro&shy;posons des so&shy;lu&shy;tions in&shy;no&shy;vantes pour améliorer l’har&shy;mo&shy;nie de votre sou&shy;rire tout en pré&shy;servant la san&shy;té de vos dents.
           </p>
           <ContactButton/>
         </PageSection>
@@ -55,7 +55,7 @@ const EsthetiqueScreen = () => {
               <div className='absolute top-2 -left-8'>
                 <FaCaretSquareRight size={20} />
               </div>
-              <span className='font-bold tracking-wider underline underline-offset-4'>Restauration dentaire par composite</span> : il est possible d'uti&shy;li&shy;ser des ma&shy;tériaux esthé&shy;tiques comme la ré&shy;si&shy;ne com&shy;posite pour ré&shy;pa&shy;rer ou restau&shy;rer des dents abî&shy;mées ou ca&shy;riées tout en con&shy;ser&shy;vant leur aspect na&shy;tu&shy;rel.
+              <span className='font-bold tracking-wider underline underline-offset-4'>Restauration dentaire par composite</span> : il est possible d&apos;uti&shy;li&shy;ser des ma&shy;tériaux esthé&shy;tiques comme la ré&shy;si&shy;ne com&shy;posite pour ré&shy;pa&shy;rer ou restau&shy;rer des dents abî&shy;mées ou ca&shy;riées tout en con&shy;ser&shy;vant leur aspect na&shy;tu&shy;rel.
             </li>
             <li className={classLiStandard}>
               <div className='absolute top-2 -left-8'>
@@ -80,7 +80,7 @@ const EsthetiqueScreen = () => {
             <legend className={`${tauri.className} text-center text-xs text-main-theme mt-1.5`}><i>Camera intra-oral <span className='font-bold'>MEDIT&#174;</span> utilisée durant nos soins</i></legend>
           </div>
           <p className={classPStandard}>
-            N'hésitez pas à nous con&shy;tacter pour discu&shy;ter des dif&shy;fé&shy;ren&shy;tes op&shy;tions de trai&shy;te&shy;ment esthé&shy;tique sur Montpel&shy;lier et Castelnau-le-Lez.
+            N&apos;hésitez pas à nous con&shy;tacter pour discu&shy;ter des dif&shy;fé&shy;ren&shy;tes op&shy;tions de trai&shy;te&shy;ment esthé&shy;tique sur Montpel&shy;lier et Castelnau-le-Lez.
           </p>
           <ContactButton/>
         </PageSection>

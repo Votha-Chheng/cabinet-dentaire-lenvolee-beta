@@ -79,7 +79,7 @@ const ParodontologieScreen = () => {
               </TooltipProvider>
               &nbsp;
               
-              ou de ma&shy;tière syn&shy;thé&shy;ti&shy;que est uti&shy;li&shy;sé pour la gref&shy;fe afin de restau&shy;rer les gen&shy;ci&shy;ves ré&shy;trac&shy;tées et pro&shy;téger les ra&shy;ci&shy;nes den&shy;tai&shy;res, tout en amé&shy;li&shy;orant l'esthé&shy;ti&shy;que de vo&shy;tre sou&shy;ri&shy;re.
+              ou de ma&shy;tière syn&shy;thé&shy;ti&shy;que est uti&shy;li&shy;sé pour la gref&shy;fe afin de restau&shy;rer les gen&shy;ci&shy;ves ré&shy;trac&shy;tées et pro&shy;téger les ra&shy;ci&shy;nes den&shy;tai&shy;res, tout en amé&shy;li&shy;orant l&apos;esthé&shy;ti&shy;que de vo&shy;tre sou&shy;ri&shy;re.
             </li>
           </ul>
           <p className={classPStandard}>
