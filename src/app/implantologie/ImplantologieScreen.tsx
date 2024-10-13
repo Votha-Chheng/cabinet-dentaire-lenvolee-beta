@@ -30,7 +30,7 @@ const ImplantologieScreen = () => {
         </PageSection>
         <PageSection subtitle='Poser un implant en 3 étapes' delayBoolean={false} subtitleInview={sectionTwoInview} >
           <InView onChange={(inView, entry)=> setSectionTwoInview(inView)} triggerOnce={true} />
-          <ol className='px-2.5 ml-5 list-decimal'>
+          <ol className='px-2.5 tablet:px-5 tablet:ml-7 list-decimal'>
             <li className={classLiStandard + " font-bold mb-2"}>Étude et planification personnalisée</li>
             <p className={classPLi}>
               Chaque traitement commence par une étude approfondie de votre cas, avec des examens radiographiques et un plan de traitement sur mesure.

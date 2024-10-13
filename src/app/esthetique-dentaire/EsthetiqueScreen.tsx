@@ -33,16 +33,16 @@ const EsthetiqueScreen = () => {
           </p>
           <ul className="w-full pl-12 pr-5 mt-5 mobile:pl-14 mobile:pr-10 text-justify">
             <li className={classLiStandard}>
-              <div className='absolute top-1.5 -left-8'>
+              <div className='absolute top-2.5 -left-8'>
                 <FaCaretSquareRight size={20} />
               </div>
-              <span className='font-bold tracking-wider underline underline-offset-4'>Blanchiment dentaire</span> : Redonner de l’éclat à vos dents grâce à des tech&shy;ni&shy;ques de blan&shy;chi&shy;ment den&shy;tai&shy;re ef&shy;fi&shy;ca&shy;ces et sans risque.
+              <span className='font-bold tracking-wider underline underline-offset-4 leading-8 mobile:leading-10'>Blanchiment dentaire</span> : Redonner de l’éclat à vos dents grâce à des tech&shy;ni&shy;ques de blan&shy;chi&shy;ment den&shy;tai&shy;re ef&shy;fi&shy;ca&shy;ces et sans risque.
             </li>
             <li className={classLiStandard}>
               <div className='absolute top-2 -left-8'>
                 <FaCaretSquareRight size={20} />
               </div>
-              <span className='font-bold tracking-wider underline underline-offset-4'>Orthodontie</span> : notre cabinet est associé à <span className='italic font-bold'>Aligneurs Français</span>&#174;, un système de gout&shy;tières qui cor&shy;rige les légers dé&shy;fauts d’ali&shy;gne&shy;ments. <span className='font-bold'>Dans les cas im&shy;por&shy;tants, vous se&shy;rez re&shy;di&shy;rigés vers un ortho&shy;don&shy;tiste qua&shy;lifié.</span>
+              <span className='font-bold tracking-wider underline underline-offset-4 leading-8 mobile:leading-10'>Orthodontie</span> : notre cabinet est associé à <span className='italic font-bold'>Aligneurs Français</span>&#174;, un système de gout&shy;tières qui cor&shy;rige les légers dé&shy;fauts d’ali&shy;gne&shy;ments. <span className='font-bold'>Dans les cas im&shy;por&shy;tants, vous se&shy;rez re&shy;di&shy;rigés vers un ortho&shy;don&shy;tiste qua&shy;lifié.</span>
             </li>
             <div className='my-10'>
               <Image src="/images/aligneur-francais.jpg" alt="Scanner intra-oral Medit" width={700} height={400} className='border-main-theme border-2 mx-auto' />
