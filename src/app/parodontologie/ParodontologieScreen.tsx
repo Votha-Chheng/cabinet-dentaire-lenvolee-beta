@@ -2,27 +2,98 @@
 
 import PageContainer from '@/components/layouts/PageContainer'
 import PageSection from '@/components/layouts/PageSection'
+import ContactButton from '@/components/shared/ContactButton'
 import PageHeader from '@/components/shared/PageHeader'
 import { TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { classPStandard } from '@/datas/classNames'
+import { classLiStandard, classPStandard, classUl } from '@/datas/classNames'
 import { tauri } from '@/fonts/tauri'
 import { Tooltip } from '@radix-ui/react-tooltip'
-import Image from 'next/image'
-import Link from 'next/link'
 import React, { useState } from 'react'
+import { FaCaretSquareRight } from 'react-icons/fa'
 import { InView } from 'react-intersection-observer'
 
 const ParodontologieScreen = () => {
   const [sectionTwoInview, setSectionTwoInview] = useState<boolean>(false)
-  const [sectionThreeInview, setSectionThreeInview] = useState<boolean>(false)
-  const [sectionFourInview, setSectionFourInview] = useState<boolean>(false)
-  const [sectionFiveInview, setSectionFiveInview] = useState<boolean>(false)
   
   return (
     <>
       <PageHeader img='parodontologie.jpg' title='Parodontologie'/>
       <PageContainer>
-        <PageSection subtitle="Une spécialité au service de vos gencives" delayBoolean={true} >
+        <PageSection subtitle="Au service des gencives" delayBoolean={true} >
+          <p className={classPStandard}>
+            La santé de vos gencives est tout aussi im&shy;por&shy;tan&shy;te que celle de vos dents. La paro&shy;dontologie est la spé&shy;ciali&shy;té den&shy;taire qui trai&shy;te les ma&shy;la&shy;dies des gen&shy;cives et des tis&shy;sus de sou&shy;tien des dents. Au cabinet dentaire <span className='font-bold italic'>L&apos;Envolée</span>, nous pro&shy;po&shy;sons des soins spé&shy;cialisés pour pré&shy;venir, diag&shy;nosti&shy;quer et trai&shy;ter les ma&shy;la&shy;dies paro&shy;don&shy;ta&shy;les, aussi ap&shy;pe&shy;lées <span className='font-bold'>pa&shy;ro&shy;don&shy;ti&shy;tes</span>.
+          </p>
+        </PageSection>
+        <PageSection subtitle='Soigner les parodontites' delayBoolean={false} subtitleInview={sectionTwoInview} >
+          <InView onChange={(inView, entry)=> setSectionTwoInview(inView)} triggerOnce={true} />
+          <p className={classPStandard}>
+            Les maladies des gencives peuvent avoir des con&shy;sé&shy;quen&shy;ces gra&shy;ves si elvles ne sont pas trai&shy;tées à temps, com&shy;me la per&shy;te de dents ou des pro&shy;blèmes de san&shy;té gé&shy;né&shy;rale. Nos servi&shy;ces de pa&shy;rodon&shy;to&shy;lo&shy;gie incluent :
+          </p>
+          <ul className={classUl}>
+            <li className={classLiStandard}>
+              <div className='absolute top-2 -left-10'>
+                <FaCaretSquareRight size={20} />
+              </div>
+              <span className='font-bold tracking-wider underline underline-offset-4'>Détartrage et sur&shy;faça&shy;ge radiculaire</span> : ce soin consi&shy;ste en un net&shy;toya&shy;ge en pro&shy;fon&shy;deur pour éli&shy;mi&shy;ner le tar&shy;tre et les bac&shy;té&shy;ries sous la gen&shy;ci&shy;ve et pré&shy;ve&shy;nir l’in&shy;flam&shy;ma&shy;tion.
+            </li>
+            <li className={classLiStandard}>
+              <div className='absolute top-2 -left-10'>
+                <FaCaretSquareRight size={20} />
+              </div>
+              <span className='font-bold tracking-wider underline underline-offset-4'>Traitement des po&shy;ches paro&shy;don&shy;tales</span> : ces techniques spéci&shy;fi&shy;ques sont mi&shy;ses en oeu&shy;vre pour ré&shy;duire les
+              &nbsp;
+              <TooltipProvider delayDuration={0.25}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span className='font-bold underline-offset-2 underline decoration-dashed cursor-help'>po&shy;ches paro&shy;don&shy;ta&shy;les</span>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <div className={`${tauri.className} w-72 text-justify indent-0`}>
+                      Une poche parodontale se forme lorsque les gen&shy;cives se dé&shy;ta&shy;chent des dents en rai&shy;son d&apos;une in&shy;flam&shy;ma&shy;tion ou d&apos;une infec&shy;tion bac&shy;té&shy;rien&shy;ne, créant un espace où les bactéries et les débris peuvent s&apos;ac&shy;cu&shy;mu&shy;ler. Ces po&shy;ches s&apos;appro&shy;fon&shy;dis&shy;sent avec le temps, fa&shy;vo&shy;risant l&apos;accu&shy;mu&shy;la&shy;tion de plus de bac&shy;téries et ac&shy;cé&shy;lé&shy;rant la dé&shy;gra&shy;da&shy;tion des os et des tissus de soutien des dents.
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider> 
+              
+              &nbsp;,
+              dans les&shy;quel&shy;les se logent les bac&shy;téries,
+              et fa&shy;vo&shy;ri&shy;sent une gué&shy;ri&shy;son optimale.
+            </li>
+            <li className={classLiStandard}>
+              <div className='absolute top-2 -left-10'>
+                <FaCaretSquareRight size={20} />
+              </div>
+              <span className='font-bold tracking-wider underline underline-offset-4'>Greffes gingivales</span> : un gref&shy;fon cons&shy;ti&shy;tué de
+              &nbsp;
+              <TooltipProvider delayDuration={0.25}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span className='font-bold underline-offset-2 underline decoration-dashed cursor-help'>tis&shy;su conjonc&shy;tif</span>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <div className={`${tauri.className} w-96 text-left indent-0`}>
+                      Tissu constituant la majorité de la masse du corps des organismes évolués comme le corps de l’être humain. C’est le type de tissu le plus abondant de notre organisme.
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              &nbsp;
+              
+              ou de ma&shy;tière syn&shy;thé&shy;ti&shy;que est uti&shy;li&shy;sé pour la gref&shy;fe afin de restau&shy;rer les gen&shy;ci&shy;ves ré&shy;trac&shy;tées et pro&shy;téger les ra&shy;ci&shy;nes den&shy;tai&shy;res, tout en amé&shy;li&shy;orant l'esthé&shy;ti&shy;que de vo&shy;tre sou&shy;ri&shy;re.
+            </li>
+          </ul>
+          <p className={classPStandard}>
+            En tant que spécialistes en parodontologie sur <span className='font-bold'>Montpellier et Castelnau-le-Lez</span>, nous met&shy;tons tout en oeu&shy;vre pour pré&shy;server la san&shy;té de vos gen&shy;cives et as&shy;su&shy;rer la sta&shy;bi&shy;li&shy;té de vos dents. Nous vous re&shy;com&shy;man&shy;dons des con&shy;sul&shy;ta&shy;tions régu&shy;lières pour pré&shy;ve&shy;nir toute pro&shy;gres&shy;ion des ma&shy;lad&shy;ies pa&shy;ro&shy;don&shy;ta&shy;les.
+          </p>
+          <br/>
+          <br/>
+          <p className={classPStandard}>
+            Contactez-nous pour <span className='font-bold'>une éva&shy;lu&shy;a&shy;tion com&shy;plè&shy;te de la san&shy;té de vos gen&shy;cives</span>.
+          </p>
+          <ContactButton/>
+
+        </PageSection>
+        {/* <PageSection subtitle="Une spécialité au service de vos gencives" delayBoolean={true} >
           <p className={classPStandard}>
             La parodontologie est la spécialité dentaire qui traite les maladies des gencives et des tissus de soutien des dents. La santé de vos gencives est tout aussi importante que celle de vos dents. Au cabinet dentaire <span className='font-bold italic'>L&apos;Envolée</span>, nous proposons des soins spé&shy;cialisés pour prévenir, diag&shy;nos&shy;tiquer et traiter les maladies pa&shy;rodon&shy;ta&shy;les, aussi appelées paro&shy;dontites.
           </p>
@@ -144,7 +215,7 @@ const ParodontologieScreen = () => {
             <p className={classPStandard + " mt-5"}>
               Si vous souffrez de récession gingivale ou si vous avez des questions sur les greffes gingivales, <Link href="tel:+33467756811" className='hover:opacity-75 italic font-bold underline underline-offset-4'>n’hésitez pas à nous contacter</Link> pour une con&shy;sul&shy;ta&shy;tion person&shy;na&shy;lisée à Montpel&shy;lier et Castel&shy;nau-le-Lez.
             </p>
-        </PageSection>
+        </PageSection> */}
       </PageContainer>
     </>
   )

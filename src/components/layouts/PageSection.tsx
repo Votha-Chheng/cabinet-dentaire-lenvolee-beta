@@ -4,7 +4,7 @@ import PageSubContainer from './PageSubContainer'
 
 type PageSectionProps = {
   children: ReactNode
-  subtitle: string
+  subtitle?: string
   subtitleInview?: boolean
   delayBoolean ?:boolean
 }
