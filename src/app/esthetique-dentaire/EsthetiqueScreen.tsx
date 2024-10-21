@@ -64,7 +64,7 @@ const EsthetiqueScreen = () => {
           </ul>
           <div className='my-10'>
             <Image src="/images/facettes-avant-apres.jpg" alt="Intervention d'endodontie" width={400} height={300} className='border-main-theme border-2 mx-auto' />
-            <legend className={`${tauri.className} text-center text-xs text-main-theme mt-1.5`}><i>Avant/Après la pose des facettes sur un cas d'attrition par bruxisme</i></legend>
+            <legend className={`${tauri.className} text-center text-xs text-main-theme mt-1.5`}><i>Avant/Après la pose des facettes sur un cas d&apos;attrition par bruxisme</i></legend>
           </div>
         </PageSection>
         <PageSection subtitle="Nos outils" subtitleInview={sectionThreeInview}>
