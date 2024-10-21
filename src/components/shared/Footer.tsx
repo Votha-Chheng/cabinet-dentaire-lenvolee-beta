@@ -9,9 +9,12 @@ import { TbLocationFilled } from 'react-icons/tb'
 import { TbDental } from "react-icons/tb"
 import { PiTramFill } from 'react-icons/pi'
 import { GoLaw } from 'react-icons/go'
+import HorairesInfo from './HorairesInfo'
+import ContactInfo from './ContactInfo'
+import AddressInfo from './AddressInfo'
+import ParkingInfo from './ParkingInfo'
 
 const Footer: FC = () => {
-  const bandStyle= "flex py-3 items-center gap-5 tracking-wider"
 
   return (
     <footer className='bg-main-theme text-buff flex flex-col w-full'>
@@ -21,58 +24,27 @@ const Footer: FC = () => {
           <Logo/>
           <LineThrough classComplement='mt-8' bgColor='bg-buff'/>
           <aside className="self-start flex flex-col laptop:flex-row w-full pt-5 tablet:pt-0">
-            <div className="px-5 w-full">
-              <div className={bandStyle}>
-                <FaRegClock size={40} />
-                <p className='text-sm'>
-                  <em>Lundi - Mardi : 9h00-19h00</em><br/>
-                  <em>Mercredi : 14h00-19h00</em><br/>
-                  <em>Vendredi : 9h00-16h00</em>
-                </p>
-              </div>
-              <div className={bandStyle}>
-                <Image src="/images/phone-mail.svg" width={40} height={40} alt="Contact et e-mail du cabinet l'Envolée"/>
-                <p>
-                  <Link className="tel" href="tel:0467756811">04 67 75 68 11</Link><br/>
-                  <Link href="mailto:cabinetdentaire.lenvolee@gmail.com">cabinetdentaire.lenvolee@gmail.com</Link>           
-                </p>
-              </div>
-              <div className={bandStyle}>
-                <BiHandicap size={40} />
-                <p>
-                  Le cabinet est accessible aux personnes à mobilité réduite (PMR).
-                </p>
-              </div>
-              <div className={bandStyle}>
-                <TbLocationFilled size={40} />
-                <Link 
-                  href="https://www.google.fr/maps/place/Dr+Sylvie+MA+-+Francin+L+envol%C3%A9e-cabinet+dentaire/@43.6283831,3.8947128,17z/data=!3m1!4b1!4m5!3m4!1s0x12b15d67b2934f89:0x93197d4f7d8e15e4!8m2!3d43.6283792!4d3.8969015" 
-                  target="_blank" 
-                  rel="noreferrer"
-                >
-                  Résidence L&apos;Envolée<br/>
-                  3 place Charles de Gaulle<br/>
-                  34 170 Castelnau-le-Lez
-                </Link>
-              </div>
-              <div className={bandStyle}>
-                <GoLaw size={40} />
-                <Link href="/mentions-legales">
-                  Mentions légales
-                </Link>
+            <div className="px-5 w-full space-y-5">
+              <HorairesInfo/>
+              <ContactInfo/>
+              <AddressInfo/>
+              <ParkingInfo/>
+              <div className="flex pt-1.5 pb-3 items-center gap-6 tracking-wider">
+                <PiTramFill size={40} />
+                <span>Tram Ligne 2 - Arrêt Charles de Gaulle</span>
               </div>
             </div>
 
             <LineThrough bgColor='bg-buff' height='100%' width='1px' classComplement='hidden laptop:block' />
 
-            <div className="w-full px-5 pb-5 tablet:pb-0">
-              <div className={bandStyle}>
+            <div className="w-full px-5 pt-2 pb-5 tablet:pb-0">
+              <div className="flex py-3 items-center gap-5 tracking-wider">
                 <Image src="/images/oncd.svg" width={40} height={40} alt="logo ONCD"/>
                 <Link href="http://www.ordre-chirurgiens-dentistes.fr/" target="_blank" rel="noreferrer">
                   Site de l&apos;ONCD (<em>Ordre national des chirurgiens dentistes</em>)
                 </Link>
               </div>
-              <div className={bandStyle}>
+              <div className="flex py-3 items-center gap-5 tracking-wider">
                 <TbDental size={40} />
                 <p>
                   <Link href="http://www.ordre-chirurgiens-dentistes.fr/grand-public.html" target="_blank" rel="noreferrer">
@@ -81,28 +53,23 @@ const Footer: FC = () => {
                 </p>
                 
               </div>
-              <div className={bandStyle}>
+              <div className="flex py-3 items-center gap-5 tracking-wider">
                 <FaUserDoctor size={40} />
                 <a href="https://www.conseil-national.medecin.fr/annuaire" target="_blank" rel="noreferrer">
                   Trouver un médecin près de chez vous
                 </a>
               </div>
-              <div className={bandStyle}>
-                <PiTramFill size={40} />
-                <span>Tram Ligne 2 - Arrêt Charles de Gaulle</span>
+              <div className="flex py-3 items-center gap-5 tracking-wider">
+                <BiHandicap size={40} />
+                <p>
+                  Le cabinet est accessible aux personnes à mobilité réduite (PMR).
+                </p>
               </div>
-              <div className={bandStyle}>
-                <FaSquareParking size={40} />
-                <em>
-                  <ul style={{margin:"-5px 0 0 0", padding:"0", listStyle:"none"}}>
-                    <li>
-                      Parking TAM souterrain accès rue du Prado (payant)
-                    </li>
-                    <li>
-                      Parking Place Ch. de Gaulle (2h gratuites)
-                    </li>
-                  </ul>
-                </em>
+              <div className="flex py-3 items-center gap-5 tracking-wider">
+                <GoLaw size={40} />
+                <Link href="/mentions-legales">
+                  Mentions légales
+                </Link>
               </div>
             </div>  
           </aside>

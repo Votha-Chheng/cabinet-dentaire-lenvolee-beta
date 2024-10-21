@@ -24,7 +24,6 @@ const EsthetiqueScreen = () => {
           <p className={classPStandard}> 
             L&apos;esthétique dentaire joue un rôle es&shy;sen&shy;tiel dans la confiance en soi et l&apos;ap&shy;pa&shy;rence géné&shy;ra&shy;le du sou&shy;ri&shy;re. Au cabinet den&shy;taire <span className='font-bold italic'>L&apos;Envolée</span>, situé Castelnau-le-Lez, et à proxi&shy;mi&shy;té de Mont&shy;pellier, nous pro&shy;posons des so&shy;lu&shy;tions in&shy;no&shy;vantes pour améliorer l’har&shy;mo&shy;nie de votre sou&shy;rire tout en pré&shy;servant la san&shy;té de vos dents.
           </p>
-          <ContactButton/>
         </PageSection>
         <PageSection subtitle='Nos soins esthétiques' subtitleInview={sectionTwoInview}>
           <InView onChange={(inView, entry)=> setSectionTwoInview(inView)} triggerOnce={true} />
@@ -65,7 +64,7 @@ const EsthetiqueScreen = () => {
           </ul>
           <div className='my-10'>
             <Image src="/images/facettes-avant-apres.jpg" alt="Intervention d'endodontie" width={400} height={300} className='border-main-theme border-2 mx-auto' />
-            <legend className={`${tauri.className} text-center text-xs text-main-theme mt-1.5`}><i>Haut : avant la pose de facettes / Bas : après la pose</i></legend>
+            <legend className={`${tauri.className} text-center text-xs text-main-theme mt-1.5`}><i>Avant/Après la pose des facettes sur un cas d'attrition par bruxisme</i></legend>
           </div>
         </PageSection>
         <PageSection subtitle="Nos outils" subtitleInview={sectionThreeInview}>

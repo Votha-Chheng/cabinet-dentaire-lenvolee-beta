@@ -78,8 +78,8 @@ const AnchorSection: FC = () => {
         <LineThrough height='120%' bgColor='bg-buff' width='1px' classComplement='laptop:block hidden' variants={vertical} delay={0.75} originY={1} />
         <article className='h-full w-full laptop:w-1/2 flex flex-col' >
           <motion.div variants={opacities} custom={{delay: 1.9, duration: 0.25}} initial="initial" animate="animate" className='relative h-1/2 overflow-hidden'>
-            <Image src={`/images/duo.jpg`} alt="Les dentistes Sylvie Ma-Francinet et Quentin Lupi" className='tablet:block hidden' style={{objectFit:"cover"}} priority fill/>
-            <Image src={`/images/mini-group-portrait.jpg`} alt="Les dentistes Sylvie Ma-Francinet et Quentin Lupi" className='tablet:hidden block' style={{objectFit:"cover"}} priority fill/>
+            <Image src={`/images/duo.jpg`} alt="Les dentistes Sylvie Ma-Francinet et Quentin Lupi" className='tablet:block hidden' style={{objectFit:"cover", objectPosition:"50% 0%"}} priority fill/>
+            <Image src={`/images/mini-group-portrait.jpg`} alt="Les dentistes Sylvie Ma-Francin et et Quentin Lupi" className='tablet:hidden block' style={{objectFit:"cover"}} priority fill/>
           </motion.div>
           <LineThrough width='107%' bgColor='bg-buff' height='1px' classComplement="laptop:ml-0 -ml-5" variants={fromLeftOutside} />
           <aside className='relative h-1/2 text-buff flex  items-center justify-center overflow-hidden'>

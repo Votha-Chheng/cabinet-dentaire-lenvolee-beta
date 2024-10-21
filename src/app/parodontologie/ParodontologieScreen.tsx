@@ -27,7 +27,7 @@ const ParodontologieScreen = () => {
         <PageSection subtitle='Soigner les parodontites' delayBoolean={false} subtitleInview={sectionTwoInview} >
           <InView onChange={(inView, entry)=> setSectionTwoInview(inView)} triggerOnce={true} />
           <p className={classPStandard}>
-            Les maladies des gencives peuvent avoir des con&shy;sé&shy;quen&shy;ces gra&shy;ves si elvles ne sont pas trai&shy;tées à temps, com&shy;me la per&shy;te de dents ou des pro&shy;blèmes de san&shy;té gé&shy;né&shy;rale. Nos servi&shy;ces de pa&shy;rodon&shy;to&shy;lo&shy;gie incluent :
+            Les maladies des gencives peuvent avoir des con&shy;sé&shy;quen&shy;ces gra&shy;ves si elles ne sont pas trai&shy;tées à temps, com&shy;me la per&shy;te de dents ou des pro&shy;blèmes de san&shy;té gé&shy;né&shy;rale. Nos servi&shy;ces de pa&shy;rodon&shy;to&shy;lo&shy;gie incluent :
           </p>
           <ul className="w-full pl-12 pr-5 mt-5 mobile:pl-14 mobile:pr-10 text-justify">
             <li className={classLiStandard}>
