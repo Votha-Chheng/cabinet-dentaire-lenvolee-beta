@@ -1,12 +1,14 @@
 import ImageForModal from '@/components/shared/ImageForModal'
-import { caretLiClass, classParoLi, classPStandard, classUl, legendClass } from '@/datas/classNames'
+import { classUl, legendClass } from '@/datas/classNames'
 import { tauri } from '@/fonts/tauri'
-import Image from 'next/image'
 import React, { FC } from 'react'
 import { FaCaretSquareRight } from 'react-icons/fa'
 
 const Dentisterie: FC = () => {
-  const classP = "px-1.5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10"
+  const classParoLi = "mb-2 pr-5 tablet:pr-8 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-8"
+
+  const caretLiClass = 'absolute left-0 top-2 laptop:top-3 text-main-theme'
+  
   return (
     <>
       <ul className={classUl + " mb-16"}>

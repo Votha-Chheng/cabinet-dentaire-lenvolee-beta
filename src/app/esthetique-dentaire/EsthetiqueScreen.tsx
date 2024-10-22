@@ -4,7 +4,7 @@ import PageContainer from '@/components/layouts/PageContainer'
 import PageSection from '@/components/layouts/PageSection'
 import ContactButton from '@/components/shared/ContactButton'
 import PageHeader from '@/components/shared/PageHeader'
-import { caretLiClass, classLiStandard, classParoLi, classPStandard, classUl, legendClass } from '@/datas/classNames'
+import { classPStandard, classUl, legendClass } from '@/datas/classNames'
 import { tauri } from '@/fonts/tauri'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -16,6 +16,10 @@ const EsthetiqueScreen = () => {
   const [sectionTwoInview, setSectionTwoInview] = useState<boolean>(false)
   const [sectionThreeInview, setSectionThreeInview] = useState<boolean>(false)
   
+  const classParoLi = "mb-2 pr-5 tablet:pr-8 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-8"
+
+  const caretLiClass = 'absolute left-0 top-2 laptop:top-3 text-main-theme'
+
   return (
     <>
       <PageHeader img='esthetique.jpg' title='Esthétique dentaire'/>

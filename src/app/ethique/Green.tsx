@@ -1,10 +1,13 @@
 import ImageForModal from '@/components/shared/ImageForModal'
-import { caretLiClass, classParoLi, classPStandard, classUl } from '@/datas/classNames'
-import Image from 'next/image'
+import { classPStandard, classUl } from '@/datas/classNames'
 import React, { FC } from 'react'
 import { FaCaretSquareRight } from 'react-icons/fa'
 
 const Green: FC = () => {
+  const classParoLi = "mb-2 pr-5 tablet:pr-8 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-8"
+
+  const caretLiClass = 'absolute left-0 top-2 laptop:top-3 text-main-theme'
+  
   return (
     <>
       <p className={classPStandard}>

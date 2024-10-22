@@ -7,7 +7,7 @@ import React, { FC, useState } from 'react'
 import Protocole from './Protocole'
 import { InView } from 'react-intersection-observer'
 import Acces from './Acces'
-import { classPInfosPratiques, classPStandard } from '@/datas/classNames'
+import { classPStandard } from '@/datas/classNames'
 
 const InfosPratiqueScreen: FC = () => {
   const [sectionTwoInview, setSectionTwoInview] = useState<boolean>(false)

@@ -1,6 +1,6 @@
 import React, { Dispatch, FC, SetStateAction, useState } from 'react'
 import PageSection from '../layouts/PageSection'
-import { classParoLi, classPHygiene, classPLi, classPStandard, classUl } from '@/datas/classNames'
+import { classPHygiene, classPLi, classPStandard, classUl } from '@/datas/classNames'
 import Image from 'next/image'
 import { FaCaretSquareRight } from 'react-icons/fa'
 import { tauri } from '@/fonts/tauri'
@@ -14,6 +14,10 @@ const TraitementsParo: FC<TraitementsParoProps> = ({mounted}) => {
   const [paroTwoInview, setParoTwoInview] = useState<boolean>(false)
   const [paroThreeInview, setParoThreeInview] = useState<boolean>(false)
   const [paroFourInview, setParoFourInview] = useState<boolean>(false)
+
+  const classParoLi = "mb-2 pr-5 tablet:pr-8 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-8"
+
+  const caretLiClass = 'absolute left-0 top-2 laptop:top-3 text-main-theme'
 
   return (
     <>
@@ -34,45 +38,33 @@ const TraitementsParo: FC<TraitementsParoProps> = ({mounted}) => {
         <p className={classPStandard + " font-bold"}>Avez-vous un ou plusieurs de ces signes ?</p>
         <ul className={classUl}>
           <li className='flex relative'>
-            <div className='absolute top-2 laptop:top-3 text-main-theme'>
-              <FaCaretSquareRight size={20} />
-            </div>
-            <p className={classParoLi}>Votre gencive saigne lorsque vous vous bros&shy;sez les dents.</p>
+            <FaCaretSquareRight size={20} className={caretLiClass} />
+            <p className={classParoLi} >
+              Votre gencive saigne lorsque vous vous bros&shy;sez les dents.
+            </p>
           </li>
           <li className='flex relative'>
-            <div className='absolute top-2 laptop:top-3 text-main-theme'>
-              <FaCaretSquareRight size={20} />
-            </div>
+            <FaCaretSquareRight size={20} className={caretLiClass} />
             <p className={classParoLi}>Elle est rouge, enflée, sen&shy;si&shy;ble.</p> 
           </li>
           <li className='flex relative'>
-            <div className='absolute top-2 laptop:top-3 text-main-theme'>
-              <FaCaretSquareRight size={20} />
-            </div>
+            <FaCaretSquareRight size={20} className={caretLiClass} />
             <p className={classParoLi}>Elle se décolle ou se rétracte lais&shy;sant ap&shy;parai&shy;tre la ra&shy;ci&shy;ne des dents.</p> 
           </li>
           <li className='flex relative'>
-            <div className='absolute top-2 laptop:top-3 text-main-theme'>
-              <FaCaretSquareRight size={20} />
-            </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
             <p className={classParoLi}>Les dents bougent, s&apos;écartent, ou chan&shy;gent de po&shy;si&shy;tion.</p> 
           </li>
           <li className='flex relative'>
-            <div className='absolute top-2 laptop:top-3 text-main-theme'>
-              <FaCaretSquareRight size={20} />
-            </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
             <p className={classParoLi}>Du pus apparait entre la gen&shy;cive et la dent.</p> 
           </li>
           <li className='flex relative'>
-            <div className='absolute top-2 laptop:top-3 text-main-theme'>
-              <FaCaretSquareRight size={20} />
-            </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
             <p className={classParoLi}>Vous avez une mauvaise haleine.</p> 
           </li>
           <li className='flex relative'>
-            <div className='absolute top-2 laptop:top-3 text-main-theme'>
-              <FaCaretSquareRight size={20} />
-            </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
             <p className={classParoLi}>Vos prothèses (cour&shy;on&shy;nes ou ap&shy;pa&shy;reils) ne sem&shy;blent plus ajus&shy;tées.</p> 
           </li>
         </ul>	

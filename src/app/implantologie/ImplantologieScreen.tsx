@@ -3,7 +3,7 @@
 import PageContainer from '@/components/layouts/PageContainer'
 import PageSection from '@/components/layouts/PageSection'
 import PageHeader from '@/components/shared/PageHeader'
-import { classLiStandard, classPLi, classPStandard, classUl, legendClass } from '@/datas/classNames'
+import { classLiStandard, classPLi, classPStandard, legendClass } from '@/datas/classNames'
 import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import { MoveRight } from 'lucide-react'
@@ -14,7 +14,6 @@ import ContactButton from '@/components/shared/ContactButton'
 
 const ImplantologieScreen = () => {
   const [sectionTwoInview, setSectionTwoInview] = useState<boolean>(false)
-  const [sectionThreeInview, setSectionThreeInview] = useState<boolean>(false)
   
   return (
     <>

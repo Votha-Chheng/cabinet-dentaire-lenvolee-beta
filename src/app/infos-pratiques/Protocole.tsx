@@ -1,11 +1,11 @@
-import { caretLiClass, classParoLi, classPStandard, classUl } from '@/datas/classNames'
+import { classPStandard, classUl } from '@/datas/classNames'
 import React, { FC } from 'react'
 import { FaCaretSquareRight } from 'react-icons/fa'
 
 const Protocole: FC = () => {
-  const classP = "text-main-theme px-1.5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10"
-  const classLi = "flex px-2.5 py-5 tablet:p-8"
-  const classIcon = "translate-y-1.5 tablet:translate-y-2.5"
+  const classParoLi = "mb-2 pr-5 tablet:pr-8 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-8"
+
+  const caretLiClass = 'absolute left-0 top-2 laptop:top-3 text-main-theme'
 
   return (
     <>

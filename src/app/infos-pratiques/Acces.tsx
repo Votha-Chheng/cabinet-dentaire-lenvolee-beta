@@ -1,4 +1,4 @@
-import { caretLiClass, classParoLi, classPStandard, classUl } from '@/datas/classNames'
+import { classPStandard, classUl } from '@/datas/classNames'
 import { useWindowSize } from '@uidotdev/usehooks'
 import React, { FC } from 'react'
 import { FaCaretSquareRight } from 'react-icons/fa'
@@ -7,9 +7,9 @@ const Acces:FC = () => {
 
   const {width} = useWindowSize()
 
-  const classP = "px-1.5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme"
-  const classLi = "flex px-2.5 py-1 tablet:p-5"
-  const classIcon = "translate-y-1.5 tablet:translate-y-2.5 text-main-theme"
+  const classParoLi = "mb-2 pr-5 tablet:pr-8 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-8"
+
+  const caretLiClass = 'absolute left-0 top-2 laptop:top-3 text-main-theme'
 
   return (
     <>

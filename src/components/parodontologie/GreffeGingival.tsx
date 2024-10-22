@@ -1,6 +1,6 @@
 import React, { Dispatch, FC, SetStateAction, useState } from 'react'
 import PageSection from '../layouts/PageSection'
-import { classPHygiene, classPStandard, classParoLi, classUl } from '@/datas/classNames'
+import { classPHygiene, classPStandard, classUl } from '@/datas/classNames'
 import Image from 'next/image'
 import { FaCaretSquareRight } from 'react-icons/fa'
 import { tauri } from '@/fonts/tauri'
@@ -14,7 +14,11 @@ const GreffeGingival: FC = () => {
   const [greffeFourInview, setGreffeFourInview] = useState<boolean>(false)
   const [greffeFiveInview, setGreffeFiveInview] = useState<boolean>(false)
   const [imageInView, setImageInView] = useState<boolean>(false)
-  
+
+  const classParoLi = "mb-2 pr-5 tablet:pr-8 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-justify leading-8 mobile:leading-8 laptop:leading-10 desktop:leading-10 text-main-theme laptop:indent-10 indent-8"
+
+  const caretLiClass = 'absolute left-0 top-2 laptop:top-3 text-main-theme'
+
   return (
     <>
       <PageSection subtitle="Qu'est-ce qu'une greffe gingivale">
@@ -36,41 +40,31 @@ const GreffeGingival: FC = () => {
           </p>
           <ul className={classUl}>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
                 <span className='font-bold'>Maladie parodontale :</span> une inflam&shy;ma&shy;tion des gen&shy;ci&shy;ves cau&shy;sée par des bac&shy;té&shy;ries peut pro&shy;vo&shy;quer la ré&shy;trac&shy;tion gin&shy;gi&shy;vale.
               </p>
             </li>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
               <span className='font-bold'>Mauvaise hygiène buc&shy;cale :</span> un bros&shy;sa&shy;ge trop vi&shy;gou&shy;reux ou inap&shy;pro&shy;prié peut éga&shy;le&shy;ment en&shy;dom&shy;ma&shy;ger la gen&shy;ci&shy;ve.
               </p> 
             </li>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+                <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
               <span className='font-bold'>Facteurs génétiques :</span> cer&shy;tai&shy;nes personnes sont pré&shy;dispo&shy;sées à la ré&shy;ces&shy;sion gin&shy;gi&shy;va&shy;le en rai&shy;son de la fi&shy;nes&shy;se de leurs tis&shy;sus gin&shy;gi&shy;vaux.
               </p> 
             </li>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+                <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
               <span className='font-bold'>Malposition dentaire :</span> des dents mal ali&shy;gnées ou des trai&shy;te&shy;ments or&shy;tho&shy;don&shy;ti&shy;ques peu&shy;vent pro&shy;vo&shy;quer une ré&shy;trac&shy;tion gin&shy;gi&shy;va&shy;le.
               </p> 
             </li>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+                <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
                 <span className='font-bold'>Traumatismes :</span> les piercings buc&shy;caux ou les bles&shy;su&shy;res peu&shy;vent af&shy;fec&shy;ter la gen&shy;ci&shy;ve.
               </p> 
@@ -82,38 +76,30 @@ const GreffeGingival: FC = () => {
       <PageSection subtitle="symptômes" subtitleInview={greffeThreeInview} >
         <InView onChange={(inView, entry)=> setGreffeThreeInview(inView)} triggerOnce={true} />
         <div className='mb-8'>
-          <p className={classPHygiene}>
+          <p className={classPStandard}>
             Les signes qui peuvent indi&shy;quer la né&shy;ces&shy;si&shy;té d&apos;une gref&shy;fe gin&shy;gi&shy;va&shy;le in&shy;cluent :
           </p>
           <ul className={classUl}>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
                 <span className='font-bold'>Récession gingivale visible :</span> les dents ap&shy;pa&shy;rais&shy;sent plus lon&shy;gues en rai&shy;son de la gen&shy;cive qui se ré&shy;trac&shy;te.
               </p>
             </li>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
               <span className='font-bold'>Sensibilité dentaire :</span> les ra&shy;cines ex&shy;po&shy;sées sont souvent plus sen&shy;si&shy;bles à la cha&shy;leur, au froid, et à cer&shy;tains ali&shy;ments aci&shy;des ou su&shy;crés.
               </p> 
             </li>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
               <span className='font-bold'>Inflammation :</span> rou&shy;geur, gon&shy;fle&shy;ment ou sai&shy;gne&shy;ment fré&shy;quent des gen&shy;ci&shy;ves.
               </p> 
             </li>
             <li className='flex relative'>
-              <div className='absolute  top-2 laptop:top-3 text-main-theme'>
-                <FaCaretSquareRight size={20} />
-              </div>
+              <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
                 <span className='font-bold'>Douleur ou inconfort lors de la masti&shy;ca&shy;tion.</span>
               </p> 
