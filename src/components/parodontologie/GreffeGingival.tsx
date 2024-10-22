@@ -131,10 +131,10 @@ const GreffeGingival: FC = () => {
       
       <PageSection subtitle="La greffe épithélio-conjonctive : une greffe de recouvrement" subtitleInview={greffeFiveInview} >
         <InView onChange={(inView, entry)=> setGreffeFiveInview(inView)} triggerOnce={true} />
-        <p className={classPHygiene}>
+        <p className={classPStandard}>
           La greffe épithélio-con&shy;jonc&shy;tive est uti&shy;li&shy;sée pour re&shy;cou&shy;vrir une ra&shy;ci&shy;ne den&shy;taire expo&shy;sée, sou&shy;vent à la sui&shy;te d&apos;une ré&shy;ces&shy;sion gin&shy;gi&shy;vale impor&shy;tan&shy;te. Elle con&shy;siste à pré&shy;le&shy;ver une cou&shy;che de tis&shy;su sous l&apos;épi&shy;thé&shy;lium (la surface) du pa&shy;lais pour le gref&shy;fer sur la zone ex&shy;po&shy;sée.
         </p>
-        <p className={classPHygiene}>
+        <p className={classPStandard}>
           Cette technique permet non seu&shy;le&shy;ment de re&shy;cou&shy;vrir la ra&shy;ci&shy;ne, mais aus&shy;si de restau&shy;rer l&apos;esthé&shy;ti&shy;que et de ren&shy;for&shy;cer les tis&shy;sus gin&shy;gi&shy;vaux en pro&shy;fon&shy;deur.
         </p>
       </PageSection>
