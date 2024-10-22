@@ -19,7 +19,7 @@ const ImageForModal: FC<ImageForModalProps> = ({imgSrc, alt, sizeClass = "w-[380
 
   return (
     <div className={`relative cursor-pointer ${sizeClass}`} onClick={()=>onClickImg(imgSrc, alt)}>
-      <Image src={`/images/${imgSrc}`} alt={alt} fill style={{objectFit:"cover"}} />
+      <Image src={`/images/${imgSrc}`} alt={alt} fill style={{objectFit:"cover"}} className='border-main-theme border p-2' />
     </div>
   )
 }

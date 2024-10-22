@@ -4,7 +4,7 @@ import PageContainer from '@/components/layouts/PageContainer'
 import PageSection from '@/components/layouts/PageSection'
 import ContactButton from '@/components/shared/ContactButton'
 import PageHeader from '@/components/shared/PageHeader'
-import { classPStandard } from '@/datas/classNames'
+import { classPStandard, legendClass } from '@/datas/classNames'
 import { tauri } from '@/fonts/tauri'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -26,7 +26,7 @@ const EndodontieScreen = () => {
           </p>
         </PageSection>
 
-        <PageSection subtitle='Pourquoi une dévitalisation ?' delayBoolean={false} subtitleInview={sectionTwoInview} >
+        <PageSection subtitle='Pourquoi une dévitalisation ?' subtitleInview={sectionTwoInview} >
           <InView onChange={(inView, entry)=> setSectionTwoInview(inView)} triggerOnce={true} />
           <div className='mb-10'>
             <Image src="/images/endo-image-1.jpg" alt="Molaire en cours de traitement" width={500} height={400} className='border-main-theme border-2 mx-auto' />
@@ -40,7 +40,7 @@ const EndodontieScreen = () => {
           </p>
         </PageSection>
 
-        <PageSection subtitle='Retraitement Endodontique' delayBoolean={false} subtitleInview={sectionThreeInview} >
+        <PageSection subtitle='Retraitement Endodontique' subtitleInview={sectionThreeInview} >
           <InView onChange={(inView, entry)=> setSectionThreeInview(inView)} triggerOnce={true} />
           <p className={classPStandard}>
             Le retraitement endodontique est une pro&shy;cé&shy;dure con&shy;çue pour trai&shy;ter les dents ayant dé&shy;jà subi un trai&shy;tement de canal, <span className='font-bold'>mais qui présen&shy;tent à nouveau des signes d&apos;infection ou de complica&shy;tions</span>. Cet&shy;te inter&shy;ven&shy;tion permet de sau&shy;ver des dents qui, sans soin approprié, pour&shy;raient né&shy;ces&shy;siter une ex&shy;trac&shy;tion.
@@ -50,14 +50,14 @@ const EndodontieScreen = () => {
           </p>
         </PageSection>
 
-        <PageSection subtitle='Nos engagements' delayBoolean={false} subtitleInview={sectionThreeInview} >
-          <InView onChange={(inView, entry)=> setSectionThreeInview(inView)} triggerOnce={true} />
+        <PageSection subtitle='Nos engagements' subtitleInview={sectionFourInview} >
+          <InView onChange={(inView, entry)=> setSectionFourInview(inView)} triggerOnce={true} />
             <div className='mb-10'>
               <Image src="/images/cabinet-lupi-4.jpg" alt="microscope opératoire pour l'endodontie" width={400} height={300} className='border-main-theme border-2 mx-auto p-1' />
-              <legend className={`${tauri.className} text-center text-xs text-main-theme mt-1.5`}><i>Microscope opératoire</i></legend>
+              <legend className={`${tauri.className} ${legendClass}`}><i>Microscope opératoire</i></legend>
             </div>
             <p className={classPStandard}>
-              Au sein du cabinet dentaire <span className='font-bold italic'>L&apos;Envolée</span> à Mont&shy;pel&shy;lier, nous uti&shy;li&shy;sons <span className='font-bold'>des techniques modernes</span> et <span className='font-bold'>des équipements de poin&shy;te</span> tel qu&apos;un microscope opé&shy;ra&shy;toire ou en&shy;co&shy;re l&apos;utilisation <span className='font-bold'>de ma&shy;té&shy;riel à usa&shy;ge uni&shy;que sté&shy;ri&shy;le</span>, pour as&shy;surer un trai&shy;te&shy;ment ef&shy;fi&shy;cace et con&shy;for&shy;table. 
+              Au sein du cabinet dentaire <span className='font-bold italic'>L&apos;Envolée</span> à Mont&shy;pel&shy;lier, nous uti&shy;li&shy;sons <span className='font-bold'>des tech&shy;ni&shy;ques mo&shy;der&shy;nes</span> et <span className='font-bold'>des équipements de poin&shy;te</span> tel qu&apos;un microscope opé&shy;ra&shy;toire ou en&shy;co&shy;re l&apos;utilisation <span className='font-bold'>de ma&shy;té&shy;riel à usa&shy;ge uni&shy;que sté&shy;ri&shy;le</span>, pour as&shy;surer un trai&shy;te&shy;ment ef&shy;fi&shy;cace et con&shy;for&shy;table. 
             </p>
             <p className={classPStandard}>
               Notre équipe est dédiée à vous four&shy;nir des soins per&shy;son&shy;na&shy;li&shy;sés et à ré&shy;pon&shy;dre à tou&shy;tes vos questions con&shy;cer&shy;nant le trai&shy;te&shy;ment.
