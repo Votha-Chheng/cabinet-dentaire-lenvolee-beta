@@ -20,7 +20,7 @@ const SylvieCard: FC = () => {
       </h4>
       <h4 className={`${oswald.className} tracking-wider font-thin text-base mobile:text-lg laptop:text-xl py-1 relative`}>
         <motion.div className='absolute w-full h-1/2 bg-buff top-2' initial={{x:"400%", opacity:1 }} animate={{x:0, opacity:0}} transition={{delay: 2.2, duration: 0.5}} />
-        <motion.div initial={{opacity:0 }} animate={{opacity:1}} transition={{delay: 2.5, duration: 0.25}} >D.U. de parodontologie et d'implantologie</motion.div>
+        <motion.div initial={{opacity:0 }} animate={{opacity:1}} transition={{delay: 2.5, duration: 0.25}} >D.U. de parodontologie et d&apos;implantologie</motion.div>
       </h4>
       <h4 className={`${oswald.className} tracking-wider font-thin text-base mobile:text-lg laptop:text-xl py-1 relative`}>
         <motion.div className='absolute w-full h-1/2 bg-buff top-2' initial={{x:"-400%", opacity:1 }} animate={{x:0, opacity:0}} transition={{delay: 2.4, duration: 0.5}} />
