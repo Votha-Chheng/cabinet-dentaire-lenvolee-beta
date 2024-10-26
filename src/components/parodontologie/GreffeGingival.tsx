@@ -42,13 +42,7 @@ const GreffeGingival: FC = () => {
             <li className='flex relative'>
               <FaCaretSquareRight size={20} className={caretLiClass} />
               <p className={classParoLi + " mb-2"}>
-                <span className='font-bold'>Maladie parodontale :</span> une inflam&shy;ma&shy;tion des gen&shy;ci&shy;ves cau&shy;sée par des bac&shy;té&shy;ries peut pro&shy;vo&shy;quer la ré&shy;trac&shy;tion gin&shy;gi&shy;vale.
-              </p>
-            </li>
-            <li className='flex relative'>
-              <FaCaretSquareRight size={20} className={caretLiClass} />
-              <p className={classParoLi + " mb-2"}>
-              <span className='font-bold'>Mauvaise hygiène buc&shy;cale :</span> un bros&shy;sa&shy;ge trop vi&shy;gou&shy;reux ou inap&shy;pro&shy;prié peut éga&shy;le&shy;ment en&shy;dom&shy;ma&shy;ger la gen&shy;ci&shy;ve.
+              <span className='font-bold'>Hygiène buc&shy;co&shy;den&shy;tai&shy;re ina&shy;dap&shy;tée :</span> un bros&shy;sa&shy;ge trop vi&shy;gou&shy;reux ou inap&shy;pro&shy;prié peut éga&shy;le&shy;ment en&shy;dom&shy;ma&shy;ger la gen&shy;ci&shy;ve.
               </p> 
             </li>
             <li className='flex relative'>
@@ -117,17 +111,6 @@ const GreffeGingival: FC = () => {
         </p>
       </PageSection>
 
-      <motion.div 
-        className='flex flex-col my-14 laptop:ml-[280px] desktop:ml-[390px]'
-        variants={appearFromBottom}
-        initial="initial"
-        animate={imageInView ? "animate":""}
-        custom={0.25}
-      >
-        <InView onChange={(inView, entry)=> setImageInView(inView)} triggerOnce={true} />
-        <Image src="/images/greffe-avant-apres.jpg" className='mx-auto border-main-theme border' alt="Schéma représentant une gencive inflammée.." width={600} height={300} />
-        <small className={`${tauri.className} text-main-theme text-center text-xs mt-1`}><em>Avant/Après une greffe gingivale</em></small>
-      </motion.div>
       
       <PageSection subtitle="La greffe épithélio-conjonctive : une greffe de recouvrement" subtitleInview={greffeFiveInview} >
         <InView onChange={(inView, entry)=> setGreffeFiveInview(inView)} triggerOnce={true} />
@@ -137,6 +120,10 @@ const GreffeGingival: FC = () => {
         <p className={classPStandard}>
           Cette technique permet non seu&shy;le&shy;ment de re&shy;cou&shy;vrir la ra&shy;ci&shy;ne, mais aus&shy;si de restau&shy;rer l&apos;esthé&shy;ti&shy;que et de ren&shy;for&shy;cer les tis&shy;sus gin&shy;gi&shy;vaux en pro&shy;fon&shy;deur.
         </p>
+        <div className='flex flex-col mt-14 mb-20'>
+          <Image src="/images/greffe-avant-apres.jpg" className='mx-auto border border-main-theme' alt="Schéma représentant une gencive inflammée.." width={500} height={300} />
+          <small className={`${tauri.className} text-main-theme text-center text-xs mt-1`}><em>Avant/Après une greffe épithélio-conjonctive</em></small>
+        </div>
       </PageSection>
     </>
   )

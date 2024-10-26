@@ -6,11 +6,8 @@ import GreffeGingival from '@/components/parodontologie/GreffeGingival'
 import TraitementsParo from '@/components/parodontologie/TraitementsParo'
 import PageHeader from '@/components/shared/PageHeader'
 import { tauri } from '@/fonts/tauri'
-import { Tooltip } from '@radix-ui/react-tooltip'
 import { motion } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
-import { FaCaretSquareRight } from 'react-icons/fa'
-import { InView } from 'react-intersection-observer'
 
 const ParodontologieScreen = () => {
   const [mounted, setMounted] = useState<boolean>(false)
@@ -35,7 +32,7 @@ const ParodontologieScreen = () => {
   return (
     <>
       <PageHeader img='parodontologie.jpg' title='Parodontologie'/>
-      <PageContainer>
+      <PageContainer variableForUseEffect={partie}>
         <section className='w-full h-full py-16 flex flex-col laptop:flex-row'>
           <div ref={tabContainerRef}className={`${tauri.className} flex h3-title leading-10 w-full relative`}>
             <div style={{height: `${heightTab}px`, transform: `translateX(${partie ? "0":"100"}%)`}} className='w-1/2 border-main-theme border absolute bg-transparent transition-transform duration-300'/>
@@ -48,7 +45,7 @@ const ParodontologieScreen = () => {
               custom={{delay:0.75, duration: 0.25}} 
               onClick={()=> setPartie(true)}
             >
-              <span className={`${!partie && "text-slate-100 scale-75"} inline-block transition-all duration-200`}>Traitements parodontales</span>
+              <span className={`${!partie && "text-slate-100 scale-75"} inline-block transition-all duration-200`}>Traitements des maladies parodontales</span>
             </motion.h2>
             <motion.h2 
               className={`${partie ? "scale-75":"scale-100"} flex items-center justify-center laptop:text-4xl tablet:text-xl text-base w-1/2 text-center cursor-pointer transition-all duration-200 bg-buff py-2 mobile:py-[20px] px-2 tablet:px-[25px] uppercase text-main-theme`} 

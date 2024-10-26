@@ -6,9 +6,10 @@ import { vertical } from '@/animations/linesAnim'
 
 type PageContainerProps = {
   children: ReactNode
+  variableForUseEffect?: any
 }
 
-const PageContainer: FC<PageContainerProps> = ({children}) => {
+const PageContainer: FC<PageContainerProps> = ({children, variableForUseEffect}) => {
   const [bandHeight, setBandHeight] = useState<number>(0)
 
   const containerRef = useRef<HTMLDivElement>(null)
@@ -17,7 +18,7 @@ const PageContainer: FC<PageContainerProps> = ({children}) => {
     if(containerRef.current){
       setBandHeight(containerRef.current.clientHeight)
     }
-  }, [setBandHeight])
+  }, [setBandHeight, variableForUseEffect])
 
   return (
     <main className='bg-main-theme pt-44 pb-72 px-2 tablet:pr-[20px] tablet:pl-[70px] laptop:pr-[70px] laptop:pl-[110px] desktop:pr-[150px] desktop:pl-[200px] overflow-hidden'>

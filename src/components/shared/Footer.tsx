@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { FaRegClock, FaSquareParking, FaUserDoctor } from 'react-icons/fa6'
+import { FaInstagram, FaRegClock, FaSquareParking, FaUserDoctor } from 'react-icons/fa6'
 import Logo from './Logo'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,6 +13,7 @@ import HorairesInfo from './HorairesInfo'
 import ContactInfo from './ContactInfo'
 import AddressInfo from './AddressInfo'
 import ParkingInfo from './ParkingInfo'
+import { Instagram } from 'lucide-react'
 
 const Footer: FC = () => {
 
@@ -69,6 +70,12 @@ const Footer: FC = () => {
                 <GoLaw size={40} />
                 <Link href="/mentions-legales">
                   Mentions légales
+                </Link>
+              </div>
+              <div className="flex py-3 items-center gap-5 tracking-wider">
+                <FaInstagram size={40} />
+                <Link href="https://www.instagram.com/cabinetdentaire.lenvolee?igsh=MWh3Z2h2d3pkcmJ0aQ==">
+                  Suivez-nous sur Instagram
                 </Link>
               </div>
             </div>  

@@ -76,6 +76,7 @@ const HorizontalCarousel: FC<HorizontalCarouselProps> = ({images}) => {
             <ImageForModal
               imgSrc={images[currentIndex].src}
               alt={images[currentIndex].alt}
+              padding={false}
             />
           </motion.div>
           <div className='relative w-80 h-[500px] mobile:h-[600px] mobile:w-96 mx-auto cursor-pointer overflow-hidden min-w-[320px] mobile:min-w-[384px]'>
