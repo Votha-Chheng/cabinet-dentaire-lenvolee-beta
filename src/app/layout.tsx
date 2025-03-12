@@ -3,6 +3,7 @@ import "./globals.css";
 import { oswald } from "@/fonts/oswald";
 import TopMenu from "@/components/shared/menu/TopMenu";
 import Footer from "@/components/shared/Footer";
+import { Toaster } from "sonner";
 
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({
         <TopMenu/>
         {children}
         <Footer/>
+        <Toaster richColors/>
       </body>
     </html>
   );

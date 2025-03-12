@@ -1,3 +1,5 @@
+'use client'
+
 import React, { FC, ReactNode, useEffect, useRef, useState } from 'react'
 import LineThrough from '../shared/LineThrough'
 import { background, horizontalLines, verticalLines } from '@/animations/pagesAnimations'

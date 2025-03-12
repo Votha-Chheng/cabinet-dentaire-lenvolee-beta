@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC, ReactNode } from 'react'
 import PageSubtitle from '../shared/PageSubtitle'
 import PageSubContainer from './PageSubContainer'

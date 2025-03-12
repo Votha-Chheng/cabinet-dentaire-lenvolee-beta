@@ -16,9 +16,12 @@ const ContactInfo: FC<ContactInfoProps> = ({menuTop=false}) => {
           <Link href="tel:+33467756811" className='text-base'>
             04 67 75 68 11
           </Link>
-          <Link href="mailto:cabinetdentaire.lenvolee@gmail.com">
-            cabinetdentaire.lenvolee@gmail.com
+          <Link href="/demande-rdv" className='hover:underline hover:underline-offset-2 hover:scale-105'>
+            Demander un RDV par e-mail
           </Link>
+          {/* <Link href="mailto:cabinetdentaire.lenvolee@gmail.com">
+            cabinetdentaire.lenvolee@gmail.com
+          </Link> */}
         </div>
       </div>
     </article>
