@@ -9,7 +9,6 @@ import { ModalContextProvider } from '@/context/modalContext'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { InView } from 'react-intersection-observer'
-import { Button } from '../ui/button'
 
 const HomeScreen: FC = () => {
   const [presentationInView, setPresentationInView] = useState<boolean>(false)
