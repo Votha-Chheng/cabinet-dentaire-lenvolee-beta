@@ -9,6 +9,7 @@ import { ModalContextProvider } from '@/context/modalContext'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { InView } from 'react-intersection-observer'
+import { Button } from '../ui/button'
 
 const HomeScreen: FC = () => {
   const [presentationInView, setPresentationInView] = useState<boolean>(false)
@@ -42,7 +43,7 @@ const HomeScreen: FC = () => {
           <Image src="/images/team.jpg" alt="Equipe complète du Cabinet dentaire L'Envolée à Montpellier/Castelnau-le-lez" className='' fill style={{objectFit:"cover"}} />
         </motion.div>
         <PresentationSection setPresentationInView={setPresentationInView}/>
-        <AccueilSection setAccueilSectionInView={setAccueilInView}/>
+        <AccueilSection accueilSectionInview={accueilInView} setAccueilSectionInView={setAccueilInView}/>
       </main>
     </ModalContextProvider>
 

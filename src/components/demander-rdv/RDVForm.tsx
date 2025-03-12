@@ -25,7 +25,7 @@ const RDVForm = () => {
   }, [state])
   
   return (
-    <Card className={`p-5 ${tauri.className}`}>
+    <Card className={`py-5 px-2 mobile:p-5 ${tauri.className}`}>
       {
         state.success && state.data
         ?
@@ -35,7 +35,7 @@ const RDVForm = () => {
         :
         <>
           <CardTitle className='text-main-theme text-center laptop:text-xl mt-5 mb-10 '>Remplissez les champs demandés. Tous les champs sont obligatoires.</CardTitle>
-          <Card className='pt-3 pb-5 px-5'>
+          <Card className='pt-3 pb-5 px-1 mobile:px-5'>
             <form action={formAction}>
               <input type='hidden' name='contactByEmail' value={JSON.stringify(contactByEmail)} />
               <InputForm label='Nom' name='nom' placeholder='Ecrire votre nom de famille...' errorMessage={captureErrorByField(state?.errors, "nom")} />

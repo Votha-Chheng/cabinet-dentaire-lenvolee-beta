@@ -53,6 +53,11 @@ const SlideMenu: FC<SlideMenuProps> = ({slideMenu}) => {
             Infos pratiques
           </Link>
         </li>
+        <li className='hover:text-[#dcba93] hover:bg-[#414862] w-full'>
+          <Link href="/demander-rdv">
+            Demander un RDV par mail
+          </Link>
+        </li>
       </ul>
     </nav>
   )

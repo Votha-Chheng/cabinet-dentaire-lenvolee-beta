@@ -28,7 +28,7 @@ const PresentationSection: FC<PresentationSectionProps> = ({setPresentationInVie
     <section className='pt-0 tablet:pt-64 pb-96'>
       <HomeTitle title='Une équipe à taille humaine' textColor='text-main-theme' lineColor='bg-main-theme' />
       <InView as="article" onChange={(inView, entry)=> setPresentationInView(inView)} >
-      <InView triggerOnce={true} onChange={(inView, entry)=> setViewImg(inView)} />
+        <InView triggerOnce={true} onChange={(inView, entry)=> setViewImg(inView)} />
         <aside className='tablet:flex hidden w-full justify-center relative'>
           <LineThrough bgColor='bg-main-theme' width='1px' height='100%' variants={vertical} animate={viewImg ? "animate":""} delay={0.25}/>
           <motion.div 
