@@ -41,16 +41,16 @@ const RDVForm = () => {
             <form action={formAction}>
               <input type='hidden' name='docteur' value={docteur} />
               <input type='hidden' name='contactByEmail' value={JSON.stringify(contactByEmail)} />
-              <div className='mt-5 mb-10 desktop:flex desktop:items-center'>
+              <div className='mt-5 mb-10 desktop:flex desktop:flex-wrap desktop:items-center'>
                 <Label className='mobile:px-2 tablet:whitespace-nowrap desktop:text-lg'>Quel dentiste souhaitez-vous contacter ?</Label>
                 <Select value={docteur} onValueChange={(value: string)=> setDocteur(value)}>
-                  <SelectTrigger className="w-72 ml-2 desktop:text-base mt-1 desktop:mt-0">
+                  <SelectTrigger className="w-44 mobile:w-56 mobile:ml-2 text-xs desktop:text-base mt-1 desktop:mt-0">
                     <SelectValue/>
                   </SelectTrigger>
                   <SelectContent className={`${tauri.className}`}>
-                    <SelectItem className='desktop:text-base' value="Dr Sylvie MA-FRANCIN">Dr Sylvie MA-FRANCIN</SelectItem>
-                    <SelectItem className='desktop:text-base' value="Dr Quentin LUPI">Dr Quentin LUPI</SelectItem>
-                    <SelectItem className='desktop:text-base' value="Peu importe">Peu importe</SelectItem>
+                    <SelectItem className='text-xs desktop:text-base' value="Dr Sylvie MA-FRANCIN">Dr Sylvie MA-FRANCIN</SelectItem>
+                    <SelectItem className='text-xs desktop:text-base' value="Dr Quentin LUPI">Dr Quentin LUPI</SelectItem>
+                    <SelectItem className='text-xs desktop:text-base' value="Peu importe">Peu importe</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
