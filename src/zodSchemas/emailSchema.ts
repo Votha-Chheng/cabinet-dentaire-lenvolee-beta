@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const EmailSchema = z.object({
+  docteur: z.string().min(1,"Contact de dentiste nécessaire."),
   nom: z.string().min(1,"Le nom est nécessaire."),
   prenom: z.string().min(1,"Le prénom est nécessaire."),
   email: z.string().min(1, "E-mail nécessaire.").email({message: "L'e-mail est de la forme exemple@xyz.com"}),

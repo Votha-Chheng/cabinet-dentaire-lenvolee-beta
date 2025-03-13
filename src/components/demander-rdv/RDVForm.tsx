@@ -13,9 +13,11 @@ import { useFormState } from 'react-dom'
 import { sendEmailAction } from '@/actions/sendEmailAction'
 import { captureErrorByField } from '@/utils/captureErrorFields'
 import { toast } from 'sonner'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
 
 const RDVForm = () => {
   const [state, formAction] = useFormState(sendEmailAction, {})
+  const [docteur, setDocteur] = useState<string>("Dr Sylvie MA-FRANCIN")
   const [contactByEmail, setContactByEmail] = useState<boolean>(true)
 
   useEffect(()=> {
@@ -29,7 +31,7 @@ const RDVForm = () => {
       {
         state.success && state.data
         ?
-        <div className='flex flex-col gap-y-3 items-center justify-center min-h-96'>
+        <div className='flex flex-col gap-y-3 items-center justify-center min-h-[450px]'>
           <span className='text-center'>Votre demande a bien été envoyée. Nous y répondrons dans les plus brefs délais.</span><CircleCheck className='text-green-700'/>
         </div>
         :
@@ -37,7 +39,21 @@ const RDVForm = () => {
           <CardTitle className='text-main-theme text-center laptop:text-xl mt-5 mb-10 '>Remplissez les champs demandés. Tous les champs sont obligatoires.</CardTitle>
           <Card className='pt-3 pb-5 px-1 mobile:px-5'>
             <form action={formAction}>
+              <input type='hidden' name='docteur' value={docteur} />
               <input type='hidden' name='contactByEmail' value={JSON.stringify(contactByEmail)} />
+              <div className='mt-5 mb-10 desktop:flex desktop:items-center'>
+                <Label className='mobile:px-2 tablet:whitespace-nowrap desktop:text-lg'>Quel dentiste souhaitez-vous contacter ?</Label>
+                <Select value={docteur} onValueChange={(value: string)=> setDocteur(value)}>
+                  <SelectTrigger className="w-72 ml-2 desktop:text-base mt-1 desktop:mt-0">
+                    <SelectValue/>
+                  </SelectTrigger>
+                  <SelectContent className={`${tauri.className}`}>
+                    <SelectItem className='desktop:text-base' value="Dr Sylvie MA-FRANCIN">Dr Sylvie MA-FRANCIN</SelectItem>
+                    <SelectItem className='desktop:text-base' value="Dr Quentin LUPI">Dr Quentin LUPI</SelectItem>
+                    <SelectItem className='desktop:text-base' value="Peu importe">Peu importe</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
               <InputForm label='Nom' name='nom' placeholder='Ecrire votre nom de famille...' errorMessage={captureErrorByField(state?.errors, "nom")} />
               <InputForm label='Prénom' name='prenom' placeholder='Ecrire votre prénom...' errorMessage={captureErrorByField(state?.errors, "prenom")}/>
               <InputForm label='Adresse e-mail de contact' name='email' placeholder='exemple@example.com' type='email' errorMessage={captureErrorByField(state?.errors, "email")} />

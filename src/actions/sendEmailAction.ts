@@ -29,11 +29,12 @@ export const sendEmailAction = async(prevState: ServiceResponse<any>, formData: 
       to: "cabinetdentaire.lenvolee@gmail.com",
       from: "Site web Cabinet dentaire l'Envolée <no-reply@cabinetdentaire-lenvolee.fr>",
       subject: "Demande de rendez-vous",
-      text: `Ci-joint, une demande rendez-vous d'une personne nommée ${data.nom} ${data.prenom}. \nN° de téléphone : ${data.telephone}. \nAdresse e-mail : ${data.email}. \nRaison du RDV : ${data.raison}. \n\nLa personne souhaite être recontactée par ${data.contactByEmail ? "e-mail" : "téléphone"}.`,
+      text: `Ci-joint, une demande rendez-vous d'une personne nommée ${data.nom} ${data.prenom}.\nLa personne souhaite entrer en contact avec : ${data.docteur === "Peu importe" ? "n'importe quel dentiste du cabinet": data.docteur}. \nN° de téléphone : ${data.telephone}. \nAdresse e-mail : ${data.email}. \nRaison du RDV : ${data.raison}. \n\nLa personne souhaite être recontactée par ${data.contactByEmail ? "e-mail" : "téléphone"}.`,
       html: `<p>Veuillez trouvez ci-joint une demande rendez-vous d'une personne nommée ${data.nom} ${data.prenom}</p>
+      <p>La personne souhaite entrer en contact avec : ${data.docteur === "Peu importe" ? "n'importe quel dentiste du cabinet": data.docteur}.</p>
       <p>N° de téléphone : ${data.telephone}.</p>
-      <p>Adresse e-mail : ${data.email}.</p><br/>
-      <p>Raison du RDV : ${data.raison}.</p><br/>
+      <p>Adresse e-mail : ${data.email}.</p>
+      <p>Raison du RDV : ${data.raison}.</p>
       <p>La personne souhaite être recontactée par ${data.contactByEmail ? "e-mail" : "téléphone"}.</p>
       `
     })
