@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { FaCaretSquareRight } from 'react-icons/fa'
 import { tauri } from '@/fonts/tauri'
 import { InView } from 'react-intersection-observer'
+import RDVMailButton from '../shared/RDVMailButton'
+import ContactButton from '../shared/ContactButton'
 
 type TraitementsParoProps = {
   mounted: boolean
@@ -167,7 +169,12 @@ const TraitementsParo: FC<TraitementsParoProps> = ({mounted}) => {
           <Image src="/images/paro-illustration.jpg" className='mx-auto' alt="Schéma représentant une gencive inflammée.." width={600} height={300} />
           <small className={`${tauri.className} text-main-theme text-center text-xs`}><em>Prendre soin des gencives à la maison</em></small>
         </div>
-      </PageSection>
+        <RDVMailButton/>
+        <p className='text-center px-5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-main-theme'>
+          ou bien
+        </p>
+        <ContactButton/>
+    </PageSection>
     </>
   )
 }

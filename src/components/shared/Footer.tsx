@@ -1,11 +1,10 @@
 import React, { FC } from 'react'
-import { FaInstagram, FaRegClock, FaSquareParking, FaUserDoctor } from 'react-icons/fa6'
+import { FaInstagram, FaUserDoctor } from 'react-icons/fa6'
 import Logo from './Logo'
 import Image from 'next/image'
 import Link from 'next/link'
 import LineThrough from './LineThrough'
 import { BiHandicap } from "react-icons/bi";
-import { TbLocationFilled } from 'react-icons/tb'
 import { TbDental } from "react-icons/tb"
 import { PiTramFill } from 'react-icons/pi'
 import { GoLaw } from 'react-icons/go'
@@ -13,10 +12,9 @@ import HorairesInfo from './HorairesInfo'
 import ContactInfo from './ContactInfo'
 import AddressInfo from './AddressInfo'
 import ParkingInfo from './ParkingInfo'
-import { Instagram } from 'lucide-react'
+import HoraireSecretaire from './HoraireSecretaire'
 
 const Footer: FC = () => {
-
   return (
     <footer className='bg-main-theme text-buff flex flex-col w-full'>
       <LineThrough bgColor='bg-buff' />
@@ -27,13 +25,10 @@ const Footer: FC = () => {
           <aside className="self-start flex flex-col laptop:flex-row w-full pt-5 tablet:pt-0">
             <div className="px-5 w-full space-y-5">
               <HorairesInfo/>
+              <HoraireSecretaire/>
               <ContactInfo/>
               <AddressInfo/>
               <ParkingInfo/>
-              <div className="flex pt-1.5 pb-3 items-center gap-6 tracking-wider">
-                <PiTramFill size={40} />
-                <span>Tram Ligne 2 - Arrêt Charles de Gaulle</span>
-              </div>
             </div>
 
             <LineThrough bgColor='bg-buff' height='100%' width='1px' classComplement='hidden laptop:block' />
@@ -77,6 +72,10 @@ const Footer: FC = () => {
                 <Link href="https://www.instagram.com/cabinetdentaire.lenvolee?igsh=MWh3Z2h2d3pkcmJ0aQ==">
                   Suivez-nous sur Instagram
                 </Link>
+              </div>
+              <div className="flex pt-1.5 pb-3 items-center gap-6 tracking-wider">
+                <PiTramFill size={40} />
+                <span>Tram Ligne 2 - Arrêt Charles de Gaulle</span>
               </div>
             </div>  
           </aside>

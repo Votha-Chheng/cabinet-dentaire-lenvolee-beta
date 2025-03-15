@@ -4,6 +4,7 @@ import PageContainer from '@/components/layouts/PageContainer'
 import PageSection from '@/components/layouts/PageSection'
 import ContactButton from '@/components/shared/ContactButton'
 import PageHeader from '@/components/shared/PageHeader'
+import RDVMailButton from '@/components/shared/RDVMailButton'
 import { classPStandard, classUl, legendClass } from '@/datas/classNames'
 import { tauri } from '@/fonts/tauri'
 import Image from 'next/image'
@@ -93,6 +94,10 @@ const EsthetiqueScreen = () => {
           />
           <p className={classPStandard}>
             N&apos;hésitez pas à nous con&shy;tacter pour discu&shy;ter des dif&shy;fé&shy;ren&shy;tes op&shy;tions de trai&shy;te&shy;ment esthé&shy;tique sur Montpel&shy;lier et Castelnau-le-Lez.
+          </p>
+          <RDVMailButton/>
+          <p className='text-center px-5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-main-theme'>
+            ou bien
           </p>
           <ContactButton/>
         </PageSection>

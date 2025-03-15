@@ -11,6 +11,7 @@ import { Separator } from '@/components/ui/separator'
 import Image from 'next/image'
 import { tauri } from '@/fonts/tauri'
 import ContactButton from '@/components/shared/ContactButton'
+import RDVMailButton from '@/components/shared/RDVMailButton'
 
 const ImplantologieScreen = () => {
   const [sectionTwoInview, setSectionTwoInview] = useState<boolean>(false)
@@ -59,6 +60,10 @@ const ImplantologieScreen = () => {
           </div>
           <p className={classPStandard}>
             Pour en savoir plus sur les avantages des implants den&shy;taires et discu&shy;ter de vo&shy;tre plan de trai&shy;tement per&shy;son&shy;nal&shy;isé, prenez rendez-vous avec notre équi&shy;pe d’ex&shy;perts en im&shy;plan&shy;to&shy;lo&shy;gie.
+          </p>
+          <RDVMailButton/>
+          <p className='text-center px-5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-main-theme'>
+            ou bien
           </p>
           <ContactButton/>
         </PageSection>

@@ -4,6 +4,7 @@ import PageContainer from '@/components/layouts/PageContainer'
 import PageSection from '@/components/layouts/PageSection'
 import ContactButton from '@/components/shared/ContactButton'
 import PageHeader from '@/components/shared/PageHeader'
+import RDVMailButton from '@/components/shared/RDVMailButton'
 import { classPStandard, legendClass } from '@/datas/classNames'
 import { tauri } from '@/fonts/tauri'
 import Image from 'next/image'
@@ -60,6 +61,10 @@ const EndodontieScreen = () => {
             </p>
             <p className={classPStandard}>
               Notre équipe est dédiée à vous four&shy;nir des soins per&shy;son&shy;na&shy;li&shy;sés et à ré&shy;pon&shy;dre à tou&shy;tes vos questions con&shy;cer&shy;nant le trai&shy;te&shy;ment.
+            </p>
+            <RDVMailButton/>
+            <p className='text-center px-5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-main-theme'>
+              ou bien
             </p>
             <ContactButton/>
         </PageSection>

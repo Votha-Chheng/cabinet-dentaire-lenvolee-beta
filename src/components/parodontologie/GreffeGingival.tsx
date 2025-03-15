@@ -7,6 +7,8 @@ import { tauri } from '@/fonts/tauri'
 import { InView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import { appearFromBottom } from '@/animations/appearFromSides'
+import RDVMailButton from '../shared/RDVMailButton'
+import ContactButton from '../shared/ContactButton'
 
 const GreffeGingival: FC = () => {
   const [greffeTwoInview, setGreffeTwoInview] = useState<boolean>(false)
@@ -124,6 +126,11 @@ const GreffeGingival: FC = () => {
           <Image src="/images/greffe-avant-apres.jpg" className='mx-auto border border-main-theme' alt="Schéma représentant une gencive inflammée.." width={500} height={300} />
           <small className={`${tauri.className} text-main-theme text-center text-xs mt-1`}><em>Avant/Après une greffe épithélio-conjonctive</em></small>
         </div>
+        <RDVMailButton/>
+          <p className='text-center px-5 mobile:px-5 text-base mobile:text-lg laptop:text-xl desktop:text-2xl tracking-wider text-main-theme'>
+            ou bien
+          </p>
+          <ContactButton/>
       </PageSection>
     </>
   )

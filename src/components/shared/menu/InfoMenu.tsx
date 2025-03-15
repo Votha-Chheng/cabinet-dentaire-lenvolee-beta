@@ -5,6 +5,7 @@ import ParkingInfo from '../ParkingInfo'
 import AddressInfo from '../AddressInfo'
 import ContactInfo from '../ContactInfo'
 import HorairesInfo from '../HorairesInfo'
+import HoraireSecretaire from '../HoraireSecretaire'
 
 
 const InfoMenu: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variants=undefined}) => {
@@ -14,9 +15,10 @@ const InfoMenu: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variant
       custom={{delay, duration}} 
       initial="initial" 
       animate="animate" 
-      className='hidden laptop:flex self-start text-buff gap-2 laptop:gap-8 pt-2 desktop:pt-0 ml-5'
+      className='hidden laptop:flex self-start text-buff gap-1 laptop:gap-7 pt-2 desktop:pt-0 ml-5'
     >
       <HorairesInfo menuTop={true} />
+      <HoraireSecretaire menuTop={true}/>
       <ContactInfo menuTop={true}/>
       <AddressInfo menuTop={true}/>
       <ParkingInfo menuTop={true}/>
