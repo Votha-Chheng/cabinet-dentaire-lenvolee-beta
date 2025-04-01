@@ -61,7 +61,7 @@ const AnchorSection: FC = () => {
   }, [])
 
   return (
-    <section className='w-[95%] desktop:w-[1440px] mx-auto mb-0 laptop:mb-72' style={{height: returnSectionHeight(height ?? 0, width?? 0), marginTop: `${returnMarginTop(width ?? 0)}`}}>
+    <section className='w-[95%] desktop:w-[1440px] mx-auto mb-96 laptop:mb-72' style={{height: returnSectionHeight(height ?? 0, width?? 0), marginTop: `${returnMarginTop(width ?? 0)}`}}>
       <div className='w-full h-[660px] desktop:h-[700px] flex items-start relative'>
         <LineThrough height='103%' bgColor='bg-buff' width='1px' variants={vertical} delay={0.5} />
         <motion.article variants={opacities} custom={{delay: 1.8, duration: 0.25}} initial="initial" animate="animate" className="relative h-full w-1/2 hidden laptop:block">

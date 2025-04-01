@@ -32,7 +32,7 @@ const HomeScreen: FC = () => {
       <ImageModal />
       <main className={`${bgColor} transition-colors duration-300 overflow-x-hidden`}>
         <AnchorSection/>
-        <motion.div 
+        {/* <motion.div 
           initial={{opacity:0}}
           animate={viewImage ? {opacity:1}:{}}
           transition={{duraion:0.25}}
@@ -40,7 +40,7 @@ const HomeScreen: FC = () => {
         >
           <InView triggerOnce={true} onChange={(inView, entry)=> setViewImg(inView)} />
           <Image src="/images/team.jpg" alt="Equipe complète du Cabinet dentaire L'Envolée à Montpellier/Castelnau-le-lez" className='' fill style={{objectFit:"cover"}} />
-        </motion.div>
+        </motion.div> */}
         <PresentationSection setPresentationInView={setPresentationInView}/>
         <AccueilSection accueilSectionInview={accueilInView} setAccueilSectionInView={setAccueilInView}/>
       </main>

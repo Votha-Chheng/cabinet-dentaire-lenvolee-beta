@@ -40,7 +40,7 @@ const Acces:FC = () => {
         <li className="relative flex">
           <FaCaretSquareRight size={20} className={caretLiClass} />
           <p className={classParoLi}>
-            Le Parking TAM souterrain (CAP CONCORDE) est si&shy;tué dans la ré&shy;si&shy;den&shy;ce du Pr&shy;do, au ni&shy;veau de l&apos;en&shy;sei&shy;gne Krys, <span className='font-semibold'>rue du Pra&shy;do</span>. <span className='font-semibold'>Sui&shy;vez le pan&shy;neau &quot;Par&shy;king TAM&quot;.</span>
+            Le Parking TAM souterrain (CAP CONCORDE) est si&shy;tué dans la ré&shy;si&shy;den&shy;ce du Pra&shy;do, au ni&shy;veau de l&apos;en&shy;sei&shy;gne Krys, <span className='font-semibold'>rue du Pra&shy;do</span>. <span className='font-semibold'>Sui&shy;vez le pan&shy;neau &quot;Par&shy;king TAM&quot;.</span>
           </p>
         </li>
       </ul>

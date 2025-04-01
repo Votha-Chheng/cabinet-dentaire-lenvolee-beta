@@ -26,10 +26,10 @@ const PresentationSection: FC<PresentationSectionProps> = ({setPresentationInVie
 
   return (
     <section className='pt-0 tablet:pt-64 pb-96'>
-      <HomeTitle title='Une équipe à taille humaine' textColor='text-main-theme' lineColor='bg-main-theme' />
+      {/* <HomeTitle title='Une équipe à taille humaine' textColor='text-main-theme' lineColor='bg-main-theme' /> */}
       <InView as="article" onChange={(inView, entry)=> setPresentationInView(inView)} >
         <InView triggerOnce={true} onChange={(inView, entry)=> setViewImg(inView)} />
-        <aside className='tablet:flex hidden w-full justify-center relative'>
+        {/* <aside className='tablet:flex hidden w-full justify-center relative'>
           <LineThrough bgColor='bg-main-theme' width='1px' height='100%' variants={vertical} animate={viewImg ? "animate":""} delay={0.25}/>
           <motion.div 
             variants={appearFromBottom} 
@@ -39,7 +39,7 @@ const PresentationSection: FC<PresentationSectionProps> = ({setPresentationInVie
             className='min-w-[95%] mobile:min-w-[85%] desktop:min-w-[60%] h-[250px] tablet:h-[400px] laptop:h-[500px] bg-[url("/images/team.jpg")] bg-cover laptop:bg-[center_top_-65px] opacity-[0.95] border-l border-r border-main-theme'
           />
           <LineThrough bgColor='bg-main-theme' width='1px' height='100%' variants={vertical} animate={viewImg ? "animate":""} delay={0.25} originY={1} />
-        </aside>
+        </aside> */}
         <LineThrough height='1px' width='100%' bgColor="bg-main-theme" variants={horizontal} animate={viewImg ? "animate":""} delay={0.5} classComplement='tablet:block hidden' />
         <div className={`${tauri.className} ${textStaggerClass}`}>
           <TextStagger text="l'envolée - Cabinet dentaire" initialDelay={0.75} inView={viewOnce} />
@@ -108,7 +108,7 @@ const PresentationSection: FC<PresentationSectionProps> = ({setPresentationInVie
           leftBrownPosition='5%' 
           brownHeight='27.5%' 
           textLeft={true}
-          nom='Estelle'
+          nom='Lydia Ferreira'
           fonction='Assistante dentaire/Secrétaire médicale'
           inView={viewOnceThree}
           img="portrait-assistante.jpg"
@@ -116,7 +116,7 @@ const PresentationSection: FC<PresentationSectionProps> = ({setPresentationInVie
           <motion.div variants={appearFromLateral} initial="initial" animate={viewOnceThree ? "animate":""} custom={0.5} className='self-start text-justify p-5 leading-8 flex gap-1'>
             <FaQuoteLeft size={50} className='-translate-y-5 tablet:block hidden min-w-8' />
             <p className='text-main-theme indent-5 tablet:indent-8 text-xl laptop:text-2xl laptop:leading-10 leading-8 tracking-wide '>
-              J’éprouve une grande satisfaction à être à l’écoute, à accueillir chaque patient afin de l’accompagner au cours de son suivi médical et de répondre au mieux à ses attentes. 
+              Expérimentée et passion&shy;née par mon mé&shy;tier, je suis à vos cô&shy;tés pour vous ac&shy;com&shy;pa&shy;gner, veil&shy;ler à vo&shy;tre bien-être et as&shy;su&shy;rer le bon dé&shy;rou&shy;le&shy;ment de vos soins, le tout, dans un envi&shy;ron&shy;ne&shy;ment se&shy;rein.
             </p>
             <FaQuoteRight size={50} className='self-end translate-y-5 tablet:block hidden min-w-8'/>
           </motion.div>

@@ -13,7 +13,7 @@ const HorairesInfo: FC<HorairesInfoProps> = ({menuTop=false}) => {
       <FaRegClock size={40} className='w-[50px]' />
       <div className={`${menuTop ? "border-l-2 text-xs border-buff px-2":"pt-2"} tracking-wider`}>
         <p className={`underline underline-offset-4 pb-1 ${tauri.className}`}>Horaires du cabinet</p>
-        <span>Lundi - Jeudi : 9h00-17h00 <br/>Vendredi : 9h00-16h00 <br/></span>
+        <span>Lundi - Jeudi : 9h00-19h00 <br/>Vendredi : 9h00-16h00 <br/></span>
       </div>
     </article>
   )
