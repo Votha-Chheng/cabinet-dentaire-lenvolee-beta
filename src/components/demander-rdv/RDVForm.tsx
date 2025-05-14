@@ -50,6 +50,7 @@ const RDVForm = () => {
                   <SelectContent className={`${tauri.className}`}>
                     <SelectItem className='text-xs desktop:text-base' value="Dr Sylvie MA-FRANCIN">Dr Sylvie MA-FRANCIN</SelectItem>
                     <SelectItem className='text-xs desktop:text-base' value="Dr Quentin LUPI">Dr Quentin LUPI</SelectItem>
+                    <SelectItem className='text-xs desktop:text-base' value="Dr Juliette COURT">Dr Juliette COURT</SelectItem>
                     <SelectItem className='text-xs desktop:text-base' value="Peu importe">Peu importe</SelectItem>
                   </SelectContent>
                 </Select>
