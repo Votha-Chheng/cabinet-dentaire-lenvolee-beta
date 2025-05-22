@@ -7,6 +7,7 @@ import { tauri } from '@/fonts/tauri'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { AnimationParametersProps } from '@/@types/animationParametersProps'
+import { libreBaskerville } from '@/fonts/libreBaskerville'
 
 
 const Logo: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variants=undefined}) => {
@@ -31,7 +32,7 @@ const Logo: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variants=un
         className="uppercase flex flex-col text-buff text-center pb-3 desktop:pb-0" 
         style={{width:`${width}px`}}
       >
-        <h1 className={`${frankRuhl.className} text-2xl tablet:text-4xl`} style={{letterSpacing: "17.5px"}} ><span className='inline-block' ref={h1Ref}>L&apos;envolée</span></h1>
+        <h1 className={`${libreBaskerville.className} text-xl tablet:text-3xl`} style={{letterSpacing: "17px"}} ><span className='inline-block' ref={h1Ref}>L&apos;envolée</span></h1>
         <div className="flex gap-x-2.5" style={{width:`${width}px`}}>
           <LineThrough width='55%' height="1.5px" bgColor="bg-buff" classComplement='my-auto'/>
           <h1 className={`${tauri.className} text-xs tablet:text-base text-left`} style={{width:"100%", letterSpacing:"3.5px"}}>

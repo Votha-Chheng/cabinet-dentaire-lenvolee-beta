@@ -61,12 +61,12 @@ const RDVForm = () => {
               <InputForm label='N° de téléphone' name='telephone' type='tel' placeholder='0XXXXXXXXX' pattern='[0-9]{10}' errorMessage={captureErrorByField(state?.errors, "telephone")}/>
               <div className='mb-10'>
                 <Label className={`mobile:px-2 mobile:whitespace-nowrap desktop:text-lg ${tauri.className}`}>Raison de la demande de rendez-vous :</Label>
-                <div className='relative'>
+                <div className='relative max-h-96'>
                   <Textarea 
                     name='raison'
                     required 
                     aria-required 
-                    className={`ml-2 my-2.5 px-2 tablet:whitespace-nowrap text-xs desktop:text-lg tablet:placeholder:text-sm desktop:placeholder:text-lg placeholder:italic placeholder:opacity-50 ${tauri.className}`} 
+                    className={`ml-2 my-2.5 px-2 tablet:whitespace-nowrap text-xs desktop:text-base tablet:placeholder:text-sm desktop:placeholder:text-base placeholder:italic placeholder:opacity-50 ${tauri.className}`} 
                     placeholder='Décrivez-nous la raison du rendez-vous...'
                   />
                   {
@@ -78,7 +78,9 @@ const RDVForm = () => {
               <div className={`mt-5 mb-10 mobile:px-2 mobile:whitespace-nowrap text-sm laptop:text-base desktop:text-lg flex items-center gap-x-5 flex-col gap-y-1.5`}>
                 <span >Je préfère être recontacté par :</span>
                 <Card className='flex py-1 px-2 items-center gap-x-2'>
-                  <p className={`flex items-center gap-x-1 text-xs laptop:text-base desktop:text-lg  text-main-theme ${contactByEmail && "opacity-50"}`}><Phone className='hidden mobile:block' size={17.5}/>téléphone</p>
+                  <p className={`flex items-center gap-x-1 text-xs laptop:text-base desktop:text-lg  text-main-theme ${contactByEmail && "opacity-50"}`}><Phone className='hidden mobile:block' size={17.5}/>
+                    téléphone
+                  </p>
                   <Switch checked={contactByEmail} onClick={()=> setContactByEmail(prev=> !prev)} />
                   <p className={`flex items-center text-xs laptop:text-base desktop:text-lg text-main-theme gap-x-1 ${!contactByEmail && "opacity-50"}`}><span>e-mail</span><AtSign className='hidden mobile:block' size={17.5}/></p>
                 </Card>

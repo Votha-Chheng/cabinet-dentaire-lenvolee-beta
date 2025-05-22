@@ -1,5 +1,5 @@
 import { childrenAppear, parentAppear } from '@/animations/diplomesAnim'
-import { frankRuhl } from '@/fonts/frankRuhl'
+import { domine } from '@/fonts/domine'
 import { motion } from 'framer-motion'
 import React, { FC } from 'react'
 import { IoSchoolSharp } from 'react-icons/io5'
@@ -16,7 +16,7 @@ const DiplomeSlide: FC<DiplomeSlideProps> = ({diplomeListe, viewDiplomesListe, h
       variants={parentAppear}
       initial="initial"
       animate={`${viewDiplomesListe ?"animate":""}` }
-      className={`${frankRuhl.className} tracking-wide w-full h-full absolute bg-main-theme bottom-12 text-white px-2.5 laptop:px-5 py-1 laptop:py-2 transition-transform duration-200 z-30`} 
+      className={`${domine.className} tracking-wide w-full h-full absolute bg-main-theme bottom-12 text-white px-2.5 laptop:px-5 py-1 laptop:py-2 transition-transform duration-200 z-30`} 
       style={{height:`${height ? height + "px" : "auto"}`, originY:1}}
     >
       {

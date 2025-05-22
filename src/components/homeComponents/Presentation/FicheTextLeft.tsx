@@ -3,13 +3,13 @@ import { appearFromBottom } from '@/animations/appearFromSides'
 import { vertical } from '@/animations/linesAnim'
 import { opacities } from '@/animations/opacityAnim'
 import LineThrough from '@/components/shared/LineThrough'
-import { frankRuhl } from '@/fonts/frankRuhl'
 import { tauri } from '@/fonts/tauri'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react'
 import DiplomesSection from './DiplomesSection'
 import { InView } from 'react-intersection-observer'
+import { libreBaskerville } from '@/fonts/libreBaskerville'
 
 const FicheTextLeft: FC<FicheProps> = ({children, nom, fonction, inView, img, diplomeListe, diplomes=false}) => {
   const [topXParagraph, setTopXParagraph] = useState<number>(0)
@@ -37,7 +37,7 @@ const FicheTextLeft: FC<FicheProps> = ({children, nom, fonction, inView, img, di
             custom={0.8} 
             initial="initial" 
             animate={inView ? "animate":""} 
-            className={`${frankRuhl.className} text-center font-semibold uppercase py-1 text-2xl laptop:text-4xl`}
+            className={`${libreBaskerville.className} text-center font-bold uppercase py-1 text-2xl laptop:text-4xl`}
           >
             {nom}
           </motion.h2>

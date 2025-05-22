@@ -3,7 +3,7 @@ import React, { Dispatch, FC, SetStateAction, useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import FichePresentation from './FichePresentation'
 import { motion } from 'framer-motion'
-import { appearFromBottom, appearFromLateral } from '@/animations/appearFromSides'
+import { appearFromLateral } from '@/animations/appearFromSides'
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa6'
 import LineThrough from '@/components/shared/LineThrough'
 import { horizontal, vertical } from '@/animations/linesAnim'
@@ -11,6 +11,7 @@ import { tauri } from '@/fonts/tauri'
 import TextStagger from '@/components/shared/TextStagger'
 import { listeDiplomesSylvie } from '@/datas/listeDiplomesSylvie'
 import { listeDiplomesQuentin } from '@/datas/listeDiplomesQuentin'
+import { listeDiplomesJulie } from '@/datas/listeDiplomesJulie'
 
 type PresentationSectionProps = {
   setPresentationInView: Dispatch<SetStateAction<boolean>>
@@ -113,8 +114,8 @@ const PresentationSection: FC<PresentationSectionProps> = ({setPresentationInVie
           fonction='Chirurgienne dentiste'
           inView={viewOnceThree}
           img="Dr_Juliette_Court.jpg"
-          // diplomes={true}
-          // diplomesListe={listeDiplomesSylvie}
+          diplomes={true}
+          diplomesListe={listeDiplomesJulie}
         >
           <motion.div variants={appearFromLateral} initial="initial" animate={viewOnceThree ? "animate":""} custom={0.5} className='self-start text-justify py-5 px-2.5 leading-8 flex gap-1 relative'>    
             <FaQuoteLeft size={50} className='-translate-y-5 min-w-8 tablet:block hidden' />

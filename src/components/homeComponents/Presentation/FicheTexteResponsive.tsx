@@ -3,13 +3,13 @@ import { appearFromBottom } from '@/animations/appearFromSides'
 import { horizontal } from '@/animations/linesAnim'
 import { opacities } from '@/animations/opacityAnim'
 import LineThrough from '@/components/shared/LineThrough'
-import { frankRuhl } from '@/fonts/frankRuhl'
 import { oswald } from '@/fonts/oswald'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react'
 import DiplomesSection from './DiplomesSection'
 import { InView } from 'react-intersection-observer'
+import { libreBaskerville } from '@/fonts/libreBaskerville'
 
 const FicheTexteResponsive: FC<FicheProps> = ({children, nom, fonction, inView, img, diplomeListe, diplomes}) => {
   const [topXFonctionResponsive, setTopXFonctionResponsive] = useState<number>(0)
@@ -35,7 +35,7 @@ const FicheTexteResponsive: FC<FicheProps> = ({children, nom, fonction, inView, 
       </motion.div>
       <LineThrough height='1px' width='100%' bgColor="bg-main-theme" variants={horizontal} animate="animate" delay={0.5} />
       <div className='absolute bg-buff w-full text-main-theme top-96 z-20 py-2'>
-        <motion.h2 variants={appearFromBottom} custom={0.8} initial="initial" animate={inView ? "animate":""} className={`${frankRuhl.className} text-3xl text-center uppercase mobile:text-4xl py-1.5 px-2`}>
+        <motion.h2 variants={appearFromBottom} custom={0.8} initial="initial" animate={inView ? "animate":""} className={`${libreBaskerville.className} text-3xl text-center uppercase mobile:text-4xl py-1.5 px-2`}>
           {nom}
         </motion.h2>
         <motion.h2 
