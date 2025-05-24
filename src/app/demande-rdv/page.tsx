@@ -16,7 +16,7 @@ const DemandeRDVPage = () => {
             Vous avez la possibilité de solliciter un rendez-vous médical en rem&shy;plis&shy;sant soigneu&shy;se&shy;ment tou&shy;tes les informa&shy;tions du for&shy;mu&shy;laire ci-dessous. La confir&shy;ma&shy;tion du rendez-vous et la suite des échan&shy;ges se fera par e-mail ou par télé&shy;pho&shy;ne. 
           </p>
           <p className={classPStandard}>
-            Notez bien qu&apos;en remplissant ce for&shy;mu&shy;laire, votre démarche ne concerne qu&apos;une <span className='font-bold underline underline-offset-4'>de&shy;man&shy;de de rendez-vous. Nous vous re&shy;contacte&shy;rons dans les plus bref délais pour définir en&shy;sem&shy;ble d&apos;une date et d&apos;un créneau sur notre agenda.</span>
+            Notez bien qu&apos;en remplissant ce for&shy;mu&shy;laire, votre démarche ne concerne qu&apos;une <span className='font-bold underline underline-offset-4'>de&shy;man&shy;de de rendez-vous. Nous vous re&shy;contacte&shy;rons dans les plus brefs délais pour définir en&shy;sem&shy;ble d&apos;une date et d&apos;un créneau sur notre agenda.</span>
           </p>
           <p className={classPStandard}>
             Pour toute autre demande qu&apos;un rendez-vous, <span className='font-bold'>merci de nous contacter par téléphone au <Link href="tel:0467756811">04 67 75 68 11</Link>.</span>
