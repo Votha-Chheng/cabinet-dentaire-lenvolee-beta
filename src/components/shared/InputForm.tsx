@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { Label } from '../ui/label'
 import { Input } from '../ui/input'
 import { tauri } from '@/fonts/tauri'
-import { CrossIcon, X } from 'lucide-react'
+import { X } from 'lucide-react'
 
 type InputFormProps = {
   label: string
