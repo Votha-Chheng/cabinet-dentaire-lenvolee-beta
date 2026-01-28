@@ -11,13 +11,12 @@ import { AnimationParametersProps } from '@/@types/animationParametersProps'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { useWindowSize } from '@uidotdev/usehooks'
-import { FaCaretSquareDown } from 'react-icons/fa'
 import DropdownSpecialities from './DropdownSpecialities'
 
 const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, variants=undefined}) => {
   const [itemsMenuTop, setItemsMenuTop] = useState<number>(0)
   const [itemsMenuLeft, setItemsMenuLeft] = useState<number>(0)
-  const [itemsMenuHeight, setItemsMenuHeight] = useState<number>(0)
+  // const [itemsMenuHeight, setItemsMenuHeight] = useState<number>(0)
   const [itemOne, setItemOne] = useState<{width: number, positionX: number}>({width:0, positionX:0})
   const [itemTwo, setItemTwo] = useState<{width: number, positionX: number}>({width:0, positionX:0})
   const [itemThree, setItemThree] = useState<{width: number, positionX: number}>({width:0, positionX:0})
@@ -40,9 +39,9 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
     if(itemsRef.current){
       setItemsMenuTop(itemsRef.current.getBoundingClientRect().top)
       setItemsMenuLeft(itemsRef.current.getBoundingClientRect().x)
-      setItemsMenuHeight(itemsRef.current.clientHeight)
+      //setItemsMenuHeight(itemsRef.current.clientHeight)
     }
-  }, [setItemsMenuTop, setItemsMenuLeft, setItemsMenuHeight])
+  }, [setItemsMenuTop, setItemsMenuLeft])
 
   useEffect(()=> {
     if(itemOneRef.current){
@@ -110,7 +109,10 @@ const MenuItems: FC<AnimationParametersProps> = ({delay=0, duration=0.25, varian
           animate="animate" 
           className={`${tauri.className} overflow-hidden text-buff w-[95%] desktop:w-[80%] mx-auto text-lg desktop:text-xl desktop:py-1 tracking-wider`}
         >
-          <div className='flex w-[120%] gap-10 items-center transition-transform duration-150 relative py-2.5' style={{transform: `translateX(${(width !== null) && width <1024 ? "0" : position === "fixed" ? "0":"-150px"})`}} >
+          <div 
+            className='flex w-[120%] gap-10 items-center transition-transform duration-150 relative py-2.5' 
+            style={{transform: `translateX(${(width !== null) && width <1024 ? "0" : position === "fixed" ? "0":"-150px"})`}} 
+          >
             <li className='hidden laptop:block'>
               <Link href="/">
                 <Image src="/images/logo.svg" alt="logo du cabinet dentaire L'enviolée" width={150} height={150} />

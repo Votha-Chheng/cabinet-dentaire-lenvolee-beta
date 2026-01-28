@@ -16,13 +16,12 @@ const ContactInfo: FC<ContactInfoProps> = ({menuTop=false}) => {
           <Link href="tel:+33467756811" className={menuTop ? 'text-xs': "text-base"} >
             04 67 75 68 11
           </Link>
-          <Link href="/demande-rdv" className={`${menuTop ? 'text-xs w-28': "text-base"} hover:underline hover:underline-offset-2 hover:scale-105 bg-buff rounded-md text-main-theme px-2 py-0.5 font-bold  text-center tracking-normal`}>
-            Demander un RDV par e-mail
+          <Link 
+            href="/demande-rdv" 
+            className={`${menuTop ? 'text-xs w-28': "text-base"} hover:underline hover:underline-offset-2 hover:scale-105 bg-buff rounded-md text-main-theme px-2 py-0.5 font-bold  text-center tracking-normal`}
+          >
+            Demander un rendez-vous
           </Link>
-          {/* <p><span className='font-bold underline underline-offset-2'>Ouverture du secrétariat</span> <br/> Lundi - Jeudi : 9h00-19h00 <br/>Vendredi : 9h00-16h00</p> */}
-          {/* <Link href="mailto:cabinetdentaire.lenvolee@gmail.com">
-            cabinetdentaire.lenvolee@gmail.com
-          </Link> */}
         </div>
       </div>
     </article>

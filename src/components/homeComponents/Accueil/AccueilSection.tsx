@@ -25,7 +25,7 @@ const AccueilSection: FC<AccueilSectionProps> = ({setAccueilSectionInView, accue
           className={`text-lg tablet:text-xl tablet:py-4 w-4/5 tablet:w-1/3 whitespace-normal h-full mobile:transition-all mobile:duration-100 ${accueilSectionInview ? "bg-buff hover:bg-buff hover:opacity-90 hover:scale-105 text-main-theme":"bg-white text-white hover:bg-white select-none cursor-default"} ${tauri.className}`}
         >
           <Link href="/demande-rdv" className={`uppercase ${accueilSectionInview ? "cursor-pointer":"cursor-default"}`}>
-            Demander un RDV par e-mail
+            Demander un RDV
           </Link>
         </Button>
       </div>
